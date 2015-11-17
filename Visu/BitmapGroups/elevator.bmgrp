@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<BitmapGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="elevator">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="19"/>
+  <Property Name="Translate" Value="False"/>
+  <BitmapLayer LanguageId="neutral">
+    <BitmapRef ID="483" Value="Source[local].Bitmap[elevator_down_red_3]"/>
+    <BitmapRef ID="484" Value="Source[local].Bitmap[elevator_down_green_2]"/>
+    <BitmapRef ID="485" Value="Source[local].Bitmap[elevator_down_grey_0]"/>
+    <BitmapRef ID="486" Value="Source[local].Bitmap[elevator_up_red_3]"/>
+    <BitmapRef ID="487" Value="Source[local].Bitmap[elevator_up_green_2]"/>
+    <BitmapRef ID="489" Value="Source[local].Bitmap[elevator_up_grey_0]"/>
+  </BitmapLayer>
+  <IndexMap>
+    <Index ID="483" Value="5"/>
+    <Index ID="484" Value="4"/>
+    <Index ID="485" Value="3"/>
+    <Index ID="486" Value="2"/>
+    <Index ID="487" Value="1"/>
+    <Index ID="489" Value="0"/>
+  </IndexMap>
+</BitmapGroup>

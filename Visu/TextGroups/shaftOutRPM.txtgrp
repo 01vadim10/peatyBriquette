@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="shaftOutRPM">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="185"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="95660" Value="Shaft out crusher(rpm)"/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="95660" Value="Об/мин тихоходного вала дробилки:"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="95660" Value="0"/>
+  </IndexMap>
+</TextGroup>

@@ -1,0 +1,33 @@
+(*Таймеры*)
+VAR
+	coolerDustPeatyTON : TON := (0); (*Таймер привода вентилятора пылеудаления*)
+	maxLevelBunkerTON : TON := (0); (*Таймер максимального уровня бункера*)
+	highLevelBunkerTON : TON := (0); (*Таймер верхнего уровня бункера*)
+	beltDownTON : TON := (0); (*Таймер схода ленты элеватора*)
+	speedElevatorTON : TON := (0); (*Таймер контроля скорости элеватора*)
+	minCoolerDustPeatyTON : TON := (0); (*Таймер для разрежения в трубопроводе пылеудаления ниже минимального значения*)
+	shaftInTON : TON := (0); (*Таймер привода быстроходного вала дробилки.*)
+	shaftOutTON : TON := (0); (*Таймер привода тихоходного вала дробилки.*)
+	speedConvTON : TON := (0); (*Таймер контроля скорости конвейера.*)
+	beltFeederTON : TON := (0); (*Таймер привода ленты питателя.*)
+	pumpPneumTON : TON := (0); (*Таймер привод насоса пневматического*)
+	minPumpPneumTON : TON := (0); (*Таймер - давление воздуха в насосе пневматическом ниже минимального значения*)
+	maxPumpPneumTON : TON := (0); (*Таймер - давление воздуха в насосе пневматическом ниже максимального значения*)
+	millTON : TON := (0); (*Таймер привода мельницы*)
+	tempMaxMillTON : TON := (0); (*Температура корпуса мельницы превышает максимальное значение*)
+	tempMaxBunkerTON : TON := (0); (*Температура бункера превышает максимальное значение*)
+	valveExplTON : TON := (0);
+	lockRunSet : TIME := T#0S; (*Уставка для проверки блокировки*)
+	alarm : BOOL := FALSE;
+	timerAlarm : BOOL := FALSE;
+	counter : BYTE := 0;
+	alarmTempCaseBunker : BOOL := FALSE;
+	alarmCoolerDustPeaty : BOOL := FALSE;
+	alarmPumpPneumMin : BOOL := FALSE; (*В течение выдержки времени давление воздуха перед насосом пневматическим ниже минимального значения*)
+	alarmPumpPneumMax : BOOL := FALSE; (*В течение выдержки времени давление воздуха перед насосом пневматическим выше максимального значения*)
+	countDosingUnload : REAL := 0.0; (*Уставка проверки разгрузки бункера*)
+	countDosingStart : REAL := 0.0;
+	countDosingMat : REAL := 0.0;
+	colorDosing : BYTE := 0;
+	resetAlarmMessages : BOOL := FALSE; (*Сброс аварийных сообщений*)
+END_VAR

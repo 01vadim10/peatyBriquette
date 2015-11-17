@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="elmotorConrol">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="3"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="96548" Value="Start"/>
+    <Text ID="96549" Value="Stop"/>
+    <Text ID="99134" Value="Hz"/>
+    <Text ID="99135" Value="А"/>
+    <Text ID="106745" Value="Reverse"/>
+    <Text ID="106746" Value="Reset"/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="96548" Value="Пуск"/>
+    <Text ID="96549" Value="Стоп"/>
+    <Text ID="99134" Value="Гц"/>
+    <Text ID="99135" Value="А"/>
+    <Text ID="106745" Value="Реверс"/>
+    <Text ID="106746" Value="Сброс"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="96548" Value="0"/>
+    <Index ID="96549" Value="1"/>
+    <Index ID="99134" Value="2"/>
+    <Index ID="99135" Value="3"/>
+    <Index ID="106745" Value="4"/>
+    <Index ID="106746" Value="5"/>
+  </IndexMap>
+</TextGroup>

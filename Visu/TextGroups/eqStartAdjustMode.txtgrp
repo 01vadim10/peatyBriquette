@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="eqStartAdjustMode">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="180"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="95540" Value="Input and Output controls"/>
+    <Text ID="99870" Value="The features page"/>
+    <Text ID="101452" Value=""/>
+    <Text ID="105011" Value="The Schenk params"/>
+    <Text ID="107610" Value=""/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="95540" Value="Контроль входов/выходов"/>
+    <Text ID="99870" Value="Страница параметрирования"/>
+    <Text ID="101452" Value="Критические параметры"/>
+    <Text ID="105011" Value="Показатели дозатора Шенк"/>
+    <Text ID="107610" Value="Аварийный останов"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="95540" Value="0"/>
+    <Index ID="99870" Value="1"/>
+    <Index ID="101452" Value="2"/>
+    <Index ID="105011" Value="3"/>
+    <Index ID="107610" Value="4"/>
+  </IndexMap>
+</TextGroup>

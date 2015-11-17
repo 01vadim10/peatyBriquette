@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<BitmapGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="powerSepar">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="37"/>
+  <Property Name="Translate" Value="False"/>
+  <BitmapLayer LanguageId="neutral">
+    <BitmapRef ID="1208" Value="Source[local].Bitmap[powerIrSeparOff_grey_1]"/>
+    <BitmapRef ID="1209" Value="Source[local].Bitmap[powerIrSeparOn_green_2]"/>
+  </BitmapLayer>
+  <IndexMap>
+    <Index ID="1208" Value="0"/>
+    <Index ID="1209" Value="1"/>
+  </IndexMap>
+</BitmapGroup>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="changePass">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="9"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="100787" Value="User"/>
+    <Text ID="100788" Value=""/>
+    <Text ID="100789" Value=""/>
+    <Text ID="100790" Value="Admin"/>
+    <Text ID="100791" Value="Adjust Mode"/>
+    <Text ID="100792" Value="Manual Mode"/>
+    <Text ID="100793" Value="Auto Mode"/>
+    <Text ID="100794" Value="Save"/>
+    <Text ID="100795" Value="New password"/>
+    <Text ID="100796" Value="Permission"/>
+    <Text ID="100797" Value="Current password"/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="100787" Value="Пользователь"/>
+    <Text ID="100788" Value=""/>
+    <Text ID="100789" Value=""/>
+    <Text ID="100790" Value="Администратор"/>
+    <Text ID="100791" Value="Наладочный режим"/>
+    <Text ID="100792" Value="Ручной режим"/>
+    <Text ID="100793" Value="Автоматический режим"/>
+    <Text ID="100794" Value="Сохранить"/>
+    <Text ID="100795" Value="Новый пароль"/>
+    <Text ID="100796" Value="Права доступа"/>
+    <Text ID="100797" Value="Текущий пароль"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="100787" Value="0"/>
+    <Index ID="100788" Value="10"/>
+    <Index ID="100789" Value="9"/>
+    <Index ID="100790" Value="8"/>
+    <Index ID="100791" Value="7"/>
+    <Index ID="100792" Value="6"/>
+    <Index ID="100793" Value="5"/>
+    <Index ID="100794" Value="4"/>
+    <Index ID="100795" Value="3"/>
+    <Index ID="100796" Value="2"/>
+    <Index ID="100797" Value="1"/>
+  </IndexMap>
+</TextGroup>

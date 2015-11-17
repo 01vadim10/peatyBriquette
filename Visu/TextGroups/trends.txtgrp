@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="trends">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="18"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="112468" Value=""/>
+    <Text ID="112469" Value=""/>
+    <Text ID="112470" Value=""/>
+    <Text ID="112471" Value=""/>
+    <Text ID="112472" Value=""/>
+    <Text ID="112473" Value=""/>
+    <Text ID="112474" Value=""/>
+    <Text ID="112475" Value=""/>
+    <Text ID="112476" Value=""/>
+    <Text ID="112477" Value=""/>
+    <Text ID="112478" Value=""/>
+    <Text ID="112479" Value=""/>
+    <Text ID="112480" Value=""/>
+    <Text ID="112481" Value=""/>
+    <Text ID="112482" Value=""/>
+    <Text ID="112483" Value=""/>
+    <Text ID="112484" Value=""/>
+    <Text ID="112485" Value=""/>
+    <Text ID="112486" Value=""/>
+    <Text ID="112487" Value=""/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="112468" Value="Нагрузка(ток) А"/>
+    <Text ID="112469" Value="Факт. произв. дозатора"/>
+    <Text ID="112470" Value="Пневм. насос"/>
+    <Text ID="112471" Value="Пылеудаление"/>
+    <Text ID="112472" Value="Лент. питатель"/>
+    <Text ID="112473" Value="Мельница"/>
+    <Text ID="112474" Value="Быстр. вал"/>
+    <Text ID="112475" Value="Тих. вал"/>
+    <Text ID="112476" Value="Датчики"/>
+    <Text ID="112477" Value="Скорость(частота) Гц"/>
+    <Text ID="112478" Value=""/>
+    <Text ID="112479" Value=""/>
+    <Text ID="112480" Value="Темп. в сер. бункера 2"/>
+    <Text ID="112481" Value="Темп. в сер. бункера 1"/>
+    <Text ID="112482" Value="Темп. вверху бункера 2"/>
+    <Text ID="112483" Value="Темп. вверху бункера 1"/>
+    <Text ID="112484" Value="Давл. в сист. подачи угл. газа"/>
+    <Text ID="112485" Value="Разреж. в трубопр. пылеуд."/>
+    <Text ID="112486" Value="Давл. в трубопр. перед горелкой"/>
+    <Text ID="112487" Value="Давл. возд. перед насосом пневм."/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="112468" Value="0"/>
+    <Index ID="112469" Value="9"/>
+    <Index ID="112470" Value="8"/>
+    <Index ID="112471" Value="7"/>
+    <Index ID="112472" Value="6"/>
+    <Index ID="112473" Value="5"/>
+    <Index ID="112474" Value="4"/>
+    <Index ID="112475" Value="3"/>
+    <Index ID="112476" Value="2"/>
+    <Index ID="112477" Value="1"/>
+    <Index ID="112478" Value="19"/>
+    <Index ID="112479" Value="18"/>
+    <Index ID="112480" Value="17"/>
+    <Index ID="112481" Value="16"/>
+    <Index ID="112482" Value="15"/>
+    <Index ID="112483" Value="14"/>
+    <Index ID="112484" Value="13"/>
+    <Index ID="112485" Value="12"/>
+    <Index ID="112486" Value="11"/>
+    <Index ID="112487" Value="10"/>
+  </IndexMap>
+</TextGroup>

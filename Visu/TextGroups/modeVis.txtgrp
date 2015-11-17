@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="modeVis">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="17"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="111355" Value="Off"/>
+    <Text ID="111356" Value="Auto"/>
+    <Text ID="111357" Value="Manual"/>
+    <Text ID="111358" Value="Adjustm"/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="111355" Value="Откл"/>
+    <Text ID="111356" Value="Авто"/>
+    <Text ID="111357" Value="Ручн"/>
+    <Text ID="111358" Value="Налад"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="111355" Value="0"/>
+    <Index ID="111356" Value="1"/>
+    <Index ID="111357" Value="2"/>
+    <Index ID="111358" Value="3"/>
+  </IndexMap>
+</TextGroup>

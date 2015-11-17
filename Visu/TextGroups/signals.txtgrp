@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="signals">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="16"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="104120" Value=""/>
+    <Text ID="104121" Value=""/>
+    <Text ID="104122" Value=""/>
+    <Text ID="104123" Value=""/>
+    <Text ID="104124" Value=""/>
+    <Text ID="104125" Value=""/>
+    <Text ID="104126" Value=""/>
+    <Text ID="104127" Value=""/>
+    <Text ID="104128" Value=""/>
+    <Text ID="104129" Value=""/>
+    <Text ID="104130" Value=""/>
+    <Text ID="104131" Value=""/>
+    <Text ID="104132" Value=""/>
+    <Text ID="104133" Value=""/>
+    <Text ID="104134" Value=""/>
+    <Text ID="104135" Value=""/>
+    <Text ID="104136" Value=""/>
+    <Text ID="104137" Value=""/>
+    <Text ID="104138" Value=""/>
+    <Text ID="104139" Value=""/>
+    <Text ID="104140" Value=""/>
+    <Text ID="104141" Value=""/>
+    <Text ID="104142" Value=""/>
+    <Text ID="104143" Value=""/>
+    <Text ID="104144" Value=""/>
+    <Text ID="104145" Value=""/>
+    <Text ID="104146" Value=""/>
+    <Text ID="104147" Value=""/>
+    <Text ID="104148" Value=""/>
+    <Text ID="104149" Value=""/>
+    <Text ID="104150" Value=""/>
+    <Text ID="104151" Value=""/>
+    <Text ID="104152" Value=""/>
+    <Text ID="104153" Value=""/>
+    <Text ID="104154" Value=""/>
+    <Text ID="104155" Value=""/>
+    <Text ID="104156" Value=""/>
+    <Text ID="104157" Value=""/>
+    <Text ID="104158" Value=""/>
+    <Text ID="104159" Value=""/>
+    <Text ID="104160" Value=""/>
+    <Text ID="104161" Value=""/>
+    <Text ID="104162" Value=""/>
+    <Text ID="104163" Value=""/>
+    <Text ID="104164" Value=""/>
+    <Text ID="104165" Value=""/>
+    <Text ID="104166" Value=""/>
+    <Text ID="104167" Value=""/>
+    <Text ID="104168" Value=""/>
+    <Text ID="104169" Value=""/>
+    <Text ID="104170" Value=""/>
+    <Text ID="104171" Value=""/>
+    <Text ID="104172" Value=""/>
+    <Text ID="104173" Value=""/>
+    <Text ID="104174" Value=""/>
+    <Text ID="104175" Value=""/>
+    <Text ID="104176" Value=""/>
+    <Text ID="104177" Value=""/>
+    <Text ID="104178" Value=""/>
+    <Text ID="104179" Value=""/>
+    <Text ID="104180" Value=""/>
+    <Text ID="104181" Value=""/>
+    <Text ID="104182" Value=""/>
+    <Text ID="104183" Value=""/>
+    <Text ID="104184" Value=""/>
+    <Text ID="104185" Value=""/>
+    <Text ID="104186" Value=""/>
+    <Text ID="104187" Value=""/>
+    <Text ID="104188" Value=""/>
+    <Text ID="104189" Value=""/>
+    <Text ID="104190" Value=""/>
+    <Text ID="104191" Value=""/>
+    <Text ID="104192" Value=""/>
+    <Text ID="104193" Value=""/>
+    <Text ID="104194" Value=""/>
+    <Text ID="104195" Value=""/>
+    <Text ID="104196" Value=""/>
+    <Text ID="104197" Value=""/>
+    <Text ID="104198" Value=""/>
+    <Text ID="104199" Value=""/>
+    <Text ID="104200" Value=""/>
+    <Text ID="104201" Value=""/>
+    <Text ID="104202" Value=""/>
+    <Text ID="104203" Value=""/>
+    <Text ID="104204" Value=""/>
+    <Text ID="104206" Value=""/>
+    <Text ID="116505" Value=""/>
+    <Text ID="116506" Value=""/>
+    <Text ID="116507" Value=""/>
+    <Text ID="116508" Value=""/>
+    <Text ID="116509" Value=""/>
+    <Text ID="116510" Value=""/>
+    <Text ID="116511" Value=""/>
+    <Text ID="116512" Value=""/>
+    <Text ID="116513" Value=""/>
+    <Text ID="116514" Value=""/>
+    <Text ID="116516" Value=""/>
+    <Text ID="116517" Value=""/>
+    <Text ID="116518" Value=""/>
+    <Text ID="116519" Value=""/>
+    <Text ID="116520" Value=""/>
+    <Text ID="116521" Value=""/>
+    <Text ID="116522" Value=""/>
+    <Text ID="116523" Value=""/>
+    <Text ID="116524" Value=""/>
+    <Text ID="116525" Value=""/>
+    <Text ID="116526" Value=""/>
+    <Text ID="116527" Value=""/>
+    <Text ID="116528" Value=""/>
+    <Text ID="116529" Value=""/>
+    <Text ID="116530" Value=""/>
+    <Text ID="116531" Value=""/>
+    <Text ID="116532" Value=""/>
+    <Text ID="116533" Value=""/>
+    <Text ID="116534" Value=""/>
+    <Text ID="116535" Value=""/>
+    <Text ID="116536" Value=""/>
+    <Text ID="116537" Value=""/>
+    <Text ID="116538" Value=""/>
+    <Text ID="116539" Value=""/>
+    <Text ID="116540" Value=""/>
+    <Text ID="116541" Value=""/>
+    <Text ID="116542" Value=""/>
+    <Text ID="116543" Value=""/>
+    <Text ID="116544" Value=""/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="104120" Value="Мельница. Преобразователь готов"/>
+    <Text ID="104121" Value="Температура двигателя мельницы в норме."/>
+    <Text ID="104122" Value="Максимальный уровень в течке мельницы аварийный"/>
+    <Text ID="104123" Value="Быстроходный вал дробилки. Преобразователь готов"/>
+    <Text ID="104124" Value="Быстроходный вал дробилки. Привод включен"/>
+    <Text ID="104125" Value="Тихоходный вал дробилки. Преобразователь готов"/>
+    <Text ID="104126" Value="Тихоходный вал дробилки. Привод включен"/>
+    <Text ID="104127" Value="Лента питателя. Преобразователь готов"/>
+    <Text ID="104128" Value="Лента питателя. Привод включен"/>
+    <Text ID="104129" Value="Аварийные посты в зоне разгрузки питателя"/>
+    <Text ID="104130" Value="Аварийный пост в зоне загрузки питателя"/>
+    <Text ID="104131" Value="Реле безопасности питателя включено"/>
+    <Text ID="104132" Value="Реле безопасности участка дробления включено"/>
+    <Text ID="104133" Value="Питание железоотделителя включено"/>
+    <Text ID="104134" Value="Защита двигателей. Бильный вал питателя"/>
+    <Text ID="104135" Value="Защита двигателей. Элеватор"/>
+    <Text ID="104136" Value="Защита двигателей. Быстроходный вал дробилки"/>
+    <Text ID="104137" Value="Защита двигателей. Тихоходный вал дробилки"/>
+    <Text ID="104138" Value="Защита двигателей. Конвейер"/>
+    <Text ID="104139" Value="Питание входов и выходов включено"/>
+    <Text ID="104140" Value="Питание электрошкафа 2-й очереди включено"/>
+    <Text ID="104141" Value="Контроль защиты от перенапряжений"/>
+    <Text ID="104142" Value="Температурная защита ленты питателя"/>
+    <Text ID="104143" Value="Температурная защита бильного вала питателя"/>
+    <Text ID="104144" Value="Крышка питателя не закрыта"/>
+    <Text ID="104145" Value="Железоотделитель включен"/>
+    <Text ID="104146" Value="Местный пост. Участок дробления стоп"/>
+    <Text ID="104147" Value="Местный пост. Включение в наладочном режиме"/>
+    <Text ID="104148" Value="Местный пост. Управление отключено"/>
+    <Text ID="104149" Value="Бункер 1. Максимальный уровень аварийный"/>
+    <Text ID="104150" Value="Бункер 1. Верхний уровень"/>
+    <Text ID="104151" Value="Бункер 1. Нижний уровень"/>
+    <Text ID="104152" Value="Бункер 1. Минимальный уровень аварийный"/>
+    <Text ID="104153" Value="Тросовые выключатели конвейера"/>
+    <Text ID="104154" Value="Элеватор. Контроль скорости"/>
+    <Text ID="104155" Value="Элеватор. Сбегание ленты вверху"/>
+    <Text ID="104156" Value="Элеватор. Сбегание ленты внизу"/>
+    <Text ID="104157" Value="Контроль вращения конвейера"/>
+    <Text ID="104158" Value="Температурная защита конвейера"/>
+    <Text ID="104159" Value="Реле безопасности главное включено"/>
+    <Text ID="104160" Value="Питание 220 В ключено"/>
+    <Text ID="104161" Value="Питание входов и выходов включено"/>
+    <Text ID="104162" Value="Контроль защиты от перенапряжений"/>
+    <Text ID="104163" Value="Электрошкаф вентилятора пылеудаления включен."/>
+    <Text ID="104164" Value="Вентилятор пылеудаления. Преобразователь готов"/>
+    <Text ID="104165" Value="Вентилятор пылеудаления. Привод включен."/>
+    <Text ID="104166" Value="Разрешение от печи 2"/>
+    <Text ID="104167" Value="Управление дистанционное"/>
+    <Text ID="104168" Value="Управление с пульта управления"/>
+    <Text ID="104169" Value="Аварийный стоп на пульте управления"/>
+    <Text ID="104170" Value="Аварийный пост на отметке +15.7"/>
+    <Text ID="104171" Value="Аварийный пост на отметке +12.4"/>
+    <Text ID="104172" Value="Аварийный пост на отметке +6.5"/>
+    <Text ID="104173" Value="Аварийный пост на отметке +2.0"/>
+    <Text ID="104174" Value="Аварийные посты в зоне дробилки"/>
+    <Text ID="104175" Value="Разрежение в трубопроводе пылеудаления"/>
+    <Text ID="104176" Value="Давление в трубопроводе пыли перед печью 2"/>
+    <Text ID="104177" Value="Давление воздуха в насосе пневматическом 1"/>
+    <Text ID="104178" Value="Давление в системе подачи углекислого газа"/>
+    <Text ID="104179" Value="Температура корпуса мельницы 1"/>
+    <Text ID="104180" Value="Температура вверху бункера 1"/>
+    <Text ID="104181" Value="Температура в середине бункера 1"/>
+    <Text ID="104182" Value="Мельница. Привод включен"/>
+    <Text ID="104183" Value="Преобразователь готов"/>
+    <Text ID="104184" Value="Насос пневматический. Привод включен"/>
+    <Text ID="104185" Value="Контроль взрывных клапанов. Клапан 4 перед мельницей"/>
+    <Text ID="104186" Value="Контроль взрывных клапанов. Клапан 3 перед мельницей"/>
+    <Text ID="104187" Value="Контроль взрывных клапанов. Клапан 2 перед мельницей"/>
+    <Text ID="104188" Value="Контроль взрывных клапанов. Клапан 1 перед мельницей"/>
+    <Text ID="104189" Value="Местный пост. Участок помола стоп"/>
+    <Text ID="104190" Value="Местный пост. Включение в наладочном режиме"/>
+    <Text ID="104191" Value="Местный пост. Управление отключено"/>
+    <Text ID="104192" Value="Контроль защиты от перенапряжений"/>
+    <Text ID="104193" Value="Питание электрошкафа насоса пневматического включено"/>
+    <Text ID="104194" Value="Температурная защита рыхлителя"/>
+    <Text ID="104195" Value="Реле безопасности участка помола включено"/>
+    <Text ID="104196" Value="Питание входов и выходов включено"/>
+    <Text ID="104197" Value="Питание преобразователя мельницы включено"/>
+    <Text ID="104198" Value="Питание привода дозатора включено"/>
+    <Text ID="104199" Value="Температурная защита питателя шлюзового"/>
+    <Text ID="104200" Value="Защита двигателей. Питатель шлюзовый"/>
+    <Text ID="104201" Value="Защита двигателей. Рыхлитель"/>
+    <Text ID="104202" Value="Неисправность дозатора"/>
+    <Text ID="104203" Value="Весы включены"/>
+    <Text ID="104204" Value="Защита двигателей. Лента питателя"/>
+    <Text ID="104206" Value="Контроль взрывных клапанов неисправен"/>
+    <Text ID="116505" Value=""/>
+    <Text ID="116506" Value="Быстроходный вал дробилки. Назад скорость 2"/>
+    <Text ID="116507" Value="Быстроходный вал дробилки. Вперед скорость 1."/>
+    <Text ID="116508" Value="Тихоходный вал дробилки. Вентилятор"/>
+    <Text ID="116509" Value="Тихоходный вал дробилки. Назад скорость 2"/>
+    <Text ID="116510" Value="Тихоходный вал дробилки. Вперед скорость 1."/>
+    <Text ID="116511" Value="Бильный вал питателя включить"/>
+    <Text ID="116512" Value="Лента питателя. Вентилятор"/>
+    <Text ID="116513" Value="Лента питателя. Вперед скорость 1"/>
+    <Text ID="116514" Value="Подача углекислого газа. Зона помола (рабочая)"/>
+    <Text ID="116516" Value="Подача воздуха в насос пневматический"/>
+    <Text ID="116517" Value="Насос пневматический включить"/>
+    <Text ID="116518" Value="Мельница включить"/>
+    <Text ID="116519" Value="Дозирование включить"/>
+    <Text ID="116520" Value="Питатель шлюзовый включить"/>
+    <Text ID="116521" Value="Рыхлитель. Двигатель 2 включить"/>
+    <Text ID="116522" Value="Рыхлитель. Двигатель 1 включить"/>
+    <Text ID="116523" Value="Элеватор вверх"/>
+    <Text ID="116524" Value="Конвейер вперед."/>
+    <Text ID="116525" Value="Быстроходный вал дробилки. Вентилятор"/>
+    <Text ID="116526" Value="Сирена на оборудовании"/>
+    <Text ID="116527" Value="Вентилятор пылеудаления включить."/>
+    <Text ID="116528" Value="Выпуск воздуха из зоны помола"/>
+    <Text ID="116529" Value="Подача углекислого газа. Бункер 1 (аварийная)"/>
+    <Text ID="116530" Value="Подача углекислого газа. Трубопровод пыли (рабочая)"/>
+    <Text ID="116531" Value="Подача углекислого газа. Зона помола(аварийная)"/>
+    <Text ID="116532" Value=""/>
+    <Text ID="116533" Value=""/>
+    <Text ID="116534" Value=""/>
+    <Text ID="116535" Value=""/>
+    <Text ID="116536" Value=""/>
+    <Text ID="116537" Value="Звонок на пульте управления"/>
+    <Text ID="116538" Value=""/>
+    <Text ID="116539" Value=""/>
+    <Text ID="116540" Value=""/>
+    <Text ID="116541" Value=""/>
+    <Text ID="116542" Value=""/>
+    <Text ID="116543" Value=""/>
+    <Text ID="116544" Value=""/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="104120" Value="84"/>
+    <Index ID="104121" Value="61"/>
+    <Index ID="104122" Value="60"/>
+    <Index ID="104123" Value="59"/>
+    <Index ID="104124" Value="58"/>
+    <Index ID="104125" Value="57"/>
+    <Index ID="104126" Value="56"/>
+    <Index ID="104127" Value="55"/>
+    <Index ID="104128" Value="54"/>
+    <Index ID="104129" Value="53"/>
+    <Index ID="104130" Value="52"/>
+    <Index ID="104131" Value="51"/>
+    <Index ID="104132" Value="50"/>
+    <Index ID="104133" Value="49"/>
+    <Index ID="104134" Value="47"/>
+    <Index ID="104135" Value="46"/>
+    <Index ID="104136" Value="45"/>
+    <Index ID="104137" Value="44"/>
+    <Index ID="104138" Value="43"/>
+    <Index ID="104139" Value="42"/>
+    <Index ID="104140" Value="41"/>
+    <Index ID="104141" Value="40"/>
+    <Index ID="104142" Value="39"/>
+    <Index ID="104143" Value="38"/>
+    <Index ID="104144" Value="37"/>
+    <Index ID="104145" Value="36"/>
+    <Index ID="104146" Value="35"/>
+    <Index ID="104147" Value="34"/>
+    <Index ID="104148" Value="33"/>
+    <Index ID="104149" Value="32"/>
+    <Index ID="104150" Value="31"/>
+    <Index ID="104151" Value="30"/>
+    <Index ID="104152" Value="29"/>
+    <Index ID="104153" Value="28"/>
+    <Index ID="104154" Value="27"/>
+    <Index ID="104155" Value="26"/>
+    <Index ID="104156" Value="25"/>
+    <Index ID="104157" Value="24"/>
+    <Index ID="104158" Value="23"/>
+    <Index ID="104159" Value="22"/>
+    <Index ID="104160" Value="21"/>
+    <Index ID="104161" Value="20"/>
+    <Index ID="104162" Value="19"/>
+    <Index ID="104163" Value="18"/>
+    <Index ID="104164" Value="17"/>
+    <Index ID="104165" Value="16"/>
+    <Index ID="104166" Value="15"/>
+    <Index ID="104167" Value="14"/>
+    <Index ID="104168" Value="13"/>
+    <Index ID="104169" Value="12"/>
+    <Index ID="104170" Value="11"/>
+    <Index ID="104171" Value="10"/>
+    <Index ID="104172" Value="9"/>
+    <Index ID="104173" Value="8"/>
+    <Index ID="104174" Value="7"/>
+    <Index ID="104175" Value="6"/>
+    <Index ID="104176" Value="5"/>
+    <Index ID="104177" Value="4"/>
+    <Index ID="104178" Value="3"/>
+    <Index ID="104179" Value="2"/>
+    <Index ID="104180" Value="1"/>
+    <Index ID="104181" Value="0"/>
+    <Index ID="104182" Value="83"/>
+    <Index ID="104183" Value="82"/>
+    <Index ID="104184" Value="81"/>
+    <Index ID="104185" Value="80"/>
+    <Index ID="104186" Value="79"/>
+    <Index ID="104187" Value="78"/>
+    <Index ID="104188" Value="77"/>
+    <Index ID="104189" Value="76"/>
+    <Index ID="104190" Value="75"/>
+    <Index ID="104191" Value="74"/>
+    <Index ID="104192" Value="73"/>
+    <Index ID="104193" Value="72"/>
+    <Index ID="104194" Value="71"/>
+    <Index ID="104195" Value="70"/>
+    <Index ID="104196" Value="69"/>
+    <Index ID="104197" Value="68"/>
+    <Index ID="104198" Value="67"/>
+    <Index ID="104199" Value="66"/>
+    <Index ID="104200" Value="65"/>
+    <Index ID="104201" Value="64"/>
+    <Index ID="104202" Value="63"/>
+    <Index ID="104203" Value="62"/>
+    <Index ID="104204" Value="48"/>
+    <Index ID="104206" Value="85"/>
+    <Index ID="116505" Value="125"/>
+    <Index ID="116506" Value="93"/>
+    <Index ID="116507" Value="92"/>
+    <Index ID="116508" Value="91"/>
+    <Index ID="116509" Value="90"/>
+    <Index ID="116510" Value="89"/>
+    <Index ID="116511" Value="88"/>
+    <Index ID="116512" Value="87"/>
+    <Index ID="116513" Value="86"/>
+    <Index ID="116514" Value="105"/>
+    <Index ID="116516" Value="103"/>
+    <Index ID="116517" Value="102"/>
+    <Index ID="116518" Value="101"/>
+    <Index ID="116519" Value="100"/>
+    <Index ID="116520" Value="99"/>
+    <Index ID="116521" Value="98"/>
+    <Index ID="116522" Value="97"/>
+    <Index ID="116523" Value="96"/>
+    <Index ID="116524" Value="95"/>
+    <Index ID="116525" Value="94"/>
+    <Index ID="116526" Value="111"/>
+    <Index ID="116527" Value="110"/>
+    <Index ID="116528" Value="109"/>
+    <Index ID="116529" Value="108"/>
+    <Index ID="116530" Value="107"/>
+    <Index ID="116531" Value="106"/>
+    <Index ID="116532" Value="117"/>
+    <Index ID="116533" Value="116"/>
+    <Index ID="116534" Value="115"/>
+    <Index ID="116535" Value="114"/>
+    <Index ID="116536" Value="113"/>
+    <Index ID="116537" Value="112"/>
+    <Index ID="116538" Value="122"/>
+    <Index ID="116539" Value="121"/>
+    <Index ID="116540" Value="120"/>
+    <Index ID="116541" Value="119"/>
+    <Index ID="116542" Value="118"/>
+    <Index ID="116543" Value="124"/>
+    <Index ID="116544" Value="123"/>
+  </IndexMap>
+</TextGroup>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<BitmapGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="emrgPost">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="33"/>
+  <Property Name="Translate" Value="False"/>
+  <BitmapLayer LanguageId="neutral">
+    <BitmapRef ID="1195" Value="Source[local].Bitmap[emrgPostUnloadOn]"/>
+    <BitmapRef ID="1201" Value="Source[local].Bitmap[emrgPostLoadOn]"/>
+  </BitmapLayer>
+  <IndexMap>
+    <Index ID="1195" Value="1"/>
+    <Index ID="1201" Value="0"/>
+  </IndexMap>
+</BitmapGroup>

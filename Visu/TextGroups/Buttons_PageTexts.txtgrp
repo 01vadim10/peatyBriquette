@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="Buttons_PageTexts">
+  <Property Name="Description" Value="Texts for elements on pages"/>
+  <Property Name="Index" Value="14"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="95404" Value="Contrast"/>
+    <Text ID="95405" Value="Touch Calibration"/>
+    <Text ID="95406" Value="Setup"/>
+    <Text ID="95407" Value="Home"/>
+    <Text ID="95408" Value="Service"/>
+    <Text ID="95409" Value="Brightness"/>
+    <Text ID="95410" Value="Example Frame"/>
+    <Text ID="95411" Value="History"/>
+    <Text ID="95412" Value="Select Language"/>
+    <Text ID="95413" Value="Touch Configuration"/>
+    <Text ID="95414" Value="Network Settings"/>
+    <Text ID="95415" Value="IP Address:"/>
+    <Text ID="95416" Value="Node Number:"/>
+    <Text ID="95417" Value="HH:MM:SS"/>
+    <Text ID="95418" Value="yyyy/mm/dd"/>
+    <Text ID="95419" Value="Time and Date"/>
+    <Text ID="95420" Value="Alarm"/>
+    <Text ID="95421" Value="Trend"/>
+    <Text ID="95422" Value="Diagnostics"/>
+    <Text ID="95423" Value="Room temp."/>
+    <Text ID="95424" Value="Cpu temp."/>
+    <Text ID="95425" Value="Auto refresh"/>
+    <Text ID="95426" Value="Cursor control"/>
+    <Text ID="95427" Value="Cursor 1"/>
+    <Text ID="95428" Value="Cursor 2"/>
+    <Text ID="95429" Value="View all"/>
+    <Text ID="95430" Value="Time [s]"/>
+    <Text ID="95431" Value=""/>
+    <Text ID="95432" Value=""/>
+    <Text ID="95433" Value=""/>
+    <Text ID="95434" Value=""/>
+    <Text ID="95435" Value=""/>
+    <Text ID="95436" Value="Automatic"/>
+    <Text ID="95437" Value="Display Settings"/>
+    <Text ID="95947" Value="Remote/Local"/>
+    <Text ID="98340" Value="Manual/Adjust Mode"/>
+    <Text ID="109170" Value="Params"/>
+    <Text ID="109171" Value="Choose the mode"/>
+    <Text ID="109172" Value="Authorization"/>
+    <Text ID="110016" Value=""/>
+    <Text ID="112443" Value=""/>
+    <Text ID="112444" Value=""/>
+    <Text ID="112445" Value=""/>
+    <Text ID="113511" Value=""/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="95404" Value="Контраст"/>
+    <Text ID="95405" Value="Калибровка Сенсорной панели"/>
+    <Text ID="95406" Value="Установки"/>
+    <Text ID="95407" Value="Домой"/>
+    <Text ID="95408" Value="Обслуживание"/>
+    <Text ID="95409" Value="Яркость"/>
+    <Text ID="95410" Value=""/>
+    <Text ID="95411" Value="История"/>
+    <Text ID="95412" Value="Выбрать Язык"/>
+    <Text ID="95413" Value="Настройки сенсорной панели"/>
+    <Text ID="95414" Value="Настройки сети"/>
+    <Text ID="95415" Value="IP-адрес:"/>
+    <Text ID="95416" Value="Номер узла:"/>
+    <Text ID="95417" Value="ЧЧ:ММ:СС"/>
+    <Text ID="95418" Value="гггг/мм/дд"/>
+    <Text ID="95419" Value="Время и Дата"/>
+    <Text ID="95420" Value="Аварийные предупреждения"/>
+    <Text ID="95421" Value="Тренды"/>
+    <Text ID="95422" Value="Диагностика"/>
+    <Text ID="95423" Value="Комнатн. темп"/>
+    <Text ID="95424" Value=""/>
+    <Text ID="95425" Value=""/>
+    <Text ID="95426" Value=""/>
+    <Text ID="95427" Value=""/>
+    <Text ID="95428" Value=""/>
+    <Text ID="95429" Value="Просмотреть всё"/>
+    <Text ID="95430" Value="Время [с]"/>
+    <Text ID="95431" Value=""/>
+    <Text ID="95432" Value=""/>
+    <Text ID="95433" Value=""/>
+    <Text ID="95434" Value=""/>
+    <Text ID="95435" Value=""/>
+    <Text ID="95436" Value="Автомат"/>
+    <Text ID="95437" Value="Настройки Экрана"/>
+    <Text ID="95947" Value="Удал/Мест"/>
+    <Text ID="98340" Value="Ручной/Наладка"/>
+    <Text ID="109170" Value="Параметры"/>
+    <Text ID="109171" Value="Выбор режима"/>
+    <Text ID="109172" Value="Авторизация"/>
+    <Text ID="110016" Value=""/>
+    <Text ID="112443" Value="Тренды. Датчики"/>
+    <Text ID="112444" Value="Тренды. Частота двигателей"/>
+    <Text ID="112445" Value="Тренды. Нагрузки двигателей"/>
+    <Text ID="113511" Value="Диап. изм."/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="95404" Value="6010"/>
+    <Index ID="95405" Value="6009"/>
+    <Index ID="95406" Value="2"/>
+    <Index ID="95407" Value="1"/>
+    <Index ID="95408" Value="0"/>
+    <Index ID="95409" Value="6012"/>
+    <Index ID="95410" Value="1003"/>
+    <Index ID="95411" Value="6"/>
+    <Index ID="95412" Value="6000"/>
+    <Index ID="95413" Value="6001"/>
+    <Index ID="95414" Value="6002"/>
+    <Index ID="95415" Value="6003"/>
+    <Index ID="95416" Value="6004"/>
+    <Index ID="95417" Value="6005"/>
+    <Index ID="95418" Value="6006"/>
+    <Index ID="95419" Value="6007"/>
+    <Index ID="95420" Value="5"/>
+    <Index ID="95421" Value="3"/>
+    <Index ID="95422" Value="7"/>
+    <Index ID="95423" Value="1200"/>
+    <Index ID="95424" Value="1201"/>
+    <Index ID="95425" Value="1202"/>
+    <Index ID="95426" Value="1203"/>
+    <Index ID="95427" Value="1204"/>
+    <Index ID="95428" Value="1205"/>
+    <Index ID="95429" Value="1206"/>
+    <Index ID="95430" Value="1207"/>
+    <Index ID="95431" Value="1208"/>
+    <Index ID="95432" Value="1209"/>
+    <Index ID="95433" Value="1210"/>
+    <Index ID="95434" Value="1211"/>
+    <Index ID="95435" Value="1212"/>
+    <Index ID="95436" Value="8"/>
+    <Index ID="95437" Value="6008"/>
+    <Index ID="95947" Value="9"/>
+    <Index ID="98340" Value="10"/>
+    <Index ID="109170" Value="4"/>
+    <Index ID="109171" Value="11"/>
+    <Index ID="109172" Value="12"/>
+    <Index ID="110016" Value="17"/>
+    <Index ID="112443" Value="15"/>
+    <Index ID="112444" Value="14"/>
+    <Index ID="112445" Value="13"/>
+    <Index ID="113511" Value="16"/>
+  </IndexMap>
+</TextGroup>

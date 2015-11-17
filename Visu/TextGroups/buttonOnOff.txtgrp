@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="buttonOnOff">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="2"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="96342" Value="Off"/>
+    <Text ID="96343" Value="On"/>
+    <Text ID="108393" Value="Tech Stop"/>
+    <Text ID="108394" Value="Quick Stop"/>
+    <Text ID="108401" Value="Included"/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="96342" Value="Выключить"/>
+    <Text ID="96343" Value="Включить"/>
+    <Text ID="108393" Value="Техн останов"/>
+    <Text ID="108394" Value="Быстрый останов"/>
+    <Text ID="108401" Value="Включен"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="96342" Value="1"/>
+    <Index ID="96343" Value="0"/>
+    <Index ID="108393" Value="3"/>
+    <Index ID="108394" Value="2"/>
+    <Index ID="108401" Value="4"/>
+  </IndexMap>
+</TextGroup>

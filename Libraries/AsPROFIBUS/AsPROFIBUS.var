@@ -1,0 +1,80 @@
+(********************************************************************
+ * COPYRIGHT -- Bernecker + Rainer
+ ********************************************************************
+ * Library: AsPROFIBUS
+ * File: AsPROFIBUS.var
+ * Author: B+R
+ ********************************************************************
+ * Local variables of library AsPROFIBUS
+ ********************************************************************)
+                                                                      
+(*errors for PROFIBUS FUB status output*)
+VAR CONSTANT
+	ERR_PROFIBUS_PARAMETER_NOT_FOUND:	UINT := 31500;	(*PROFIBUS slave parameter not found in hardware t*)
+	ERR_PROFIBUS_HWTREE_CORRUPT:		UINT := 31501;	(*hardware tree entry not found*)
+	ERR_PROFIBUS_ILLEGAL_PARAMETER:		UINT := 31502;	(*parameter in the function call does not correspond to the definition (e.g. NULL pointer)*)
+	ERR_PROFIBUS_STATIC_CONFIG:			UINT := 31503;	(*static configuration was discovered on fieldbus interface*)
+	ERR_PROFIBUS_COMM_STOPPED:			UINT := 31504;	(*PROFIBUS master driver could not initiate communication with the fieldbus interface*)
+	ERR_PROFIBUS_STARTUP_FAILED:		UINT := 31505;	(*PROFIBUS master driver internal startup error *)
+	ERR_PROFIBUS_DATAPOINT_UNKNOWN:		UINT := 31506;	(*data point name is unknown*)
+	ERR_PROFIBUS_SET_SLAVE_ADD:			UINT := 31507;	(*PROFIBUS master driver could not change the PROFIBUS slave address*)
+	ERR_PROFIBUS_LOAD_CONFIG:			UINT := 31508;	(*PROFIBUS master could not read the configuration data for the fieldbus interface*)
+	ERR_PROFIBUS_MEMORY_FAILURE:		UINT := 31509;	(*PROFIBUS master driver could not allocate required memory*)
+	ERR_PROFIBUS_STATION_UNKNOWN:		UINT := 31510;	(*PROFIBUS station not defined in the hardware tree*)
+	ERR_PROFIBUS_CON_UNKNOWN:			UINT := 31511;	(*no connection*)
+	ERR_PROFIBUS_FUB_TIMEOUT:			UINT := 31512;	(*timeout*)
+	ERR_PROFIBUS_CON_RR:				UINT := 31513;	(*resource is not available*)
+	ERR_PROFIBUS_CON_RS:				UINT := 31514;	(*the requested master function is not activated on the PROFIBUS slave*)
+	ERR_PROFIBUS_CON_NR:				UINT := 31515;	(*no response data received from the PROFIBUS slave, although a response must be sent*)
+	ERR_PROFIBUS_CON_NA:				UINT := 31516;	(*no response from the station*)
+	ERR_PROFIBUS_CON_DS:				UINT := 31517;	(*master is not in the logical token ring*)
+	ERR_PROFIBUS_CON_NP:				UINT := 31518;	(*no plausible reaction from the remote partner (slave is not conforming to DPV1 standard)*)
+	ERR_PROFIBUS_CON_AD:				UINT := 31519;	(*negative response received, access to the requested data was denied*)
+	ERR_PROFIBUS_REJ_SE:				UINT := 31520;	(*the device is stopping DPV1 communication or the status of DPV1 is not OPEN*)
+	ERR_PROFIBUS_REJ_ABORT:				UINT := 31521;	(*the device has automatically stopped DPV1 communication*)
+	ERR_PROFIBUS_REJ_PS:				UINT := 31522;	(*a service that has been started is still being processed*)
+	ERR_PROFIBUS_REJ_LE:				UINT := 31523;	(*the length indicator msg.data_cnt exceeds the maximum configured size*)
+	ERR_PROFIBUS_REJ_IV:				UINT := 31524;	(*faulty parameter in the request*)
+	ERR_PROFIBUS_REJ_INT:				UINT := 31525;	(*alarm handler error*)
+	ERR_PROFIBUS_REJ_SRT:				UINT := 31526;	(*the alarm handler is currently stopped*)
+	ERR_PROFIBUS_REJ_ENA:				UINT := 31527;	(*the alarm that should be acknowledged is not activated in the slave parameter data*)
+	ERR_PROFIBUS_REJ_NPD:				UINT := 31528;	(*the alarm that should be acknowledged is not at MSAL1_Alarm_Res*)
+	ERR_PROFIBUS_REJ_COM:				UINT := 31529;	(*unknown msg.b command*)
+	ERR_PROFIBUS_TASK_F_DEVICE_ADR:		UINT := 31530;	(*the remote address is not in the valid range*)
+	ERR_PROFIBUS_NO_ALARM_PENDING:		UINT := 31531;	(*no alarm*)
+(*errors from the statemachine of the IEC framework*)	
+	ERR_PROFIBUS_DEVICE_NOT_FOUND: 		UINT := 31540; (*the specified device could not be found*)
+	ERR_PROFIBUS_DEVICE_NOT_OPENED: 	UINT := 31541; (*the specified device could not be opened*)		
+	ERR_PROFIBUS_INVALID_POINTER: 		UINT := 31542; (*invalid pointer (NULL)*)
+	ERR_PROFIBUS_FB_CAL_ERROR:			UINT := 31543; (*a library internal error occured executing the profibus function block*)
+	ERR_PROFIBUS_INVALID_REMOTEADR:		UINT := 31544; (*invalid slave address given, valid 0-127*)
+	ERR_PROFIBUS_INVALID_REMOTEADR1: 	UINT := 31545; (*invalid slave address given, valid 0-126*)
+	ERR_PROFIBUS_INVALID_DATALEN:		UINT := 31546; (*invalid DataLen given, must be between 0-32767*)
+	ERR_PROFIBUS_INVALID_SEQNUMBER:		UINT := 31547; (*invalid SeqNumber given, must be between 0-31*)
+	ERR_PROFIBUS_INVALID_ALARMTYPE:		UINT := 31548; (*invalid AlarmType given, must be between 1-6, 32-126*)
+	ERR_PROFIBUS_INVALID_ALARMSPEC:		UINT := 31549; (*invalid AlarmSpecAck given, must be between 0-7*)
+END_VAR
+(*tbd errors from the PB driver*)
+
+(*possible groups for PROFIBUSCommand*)
+VAR CONSTANT
+	pbCMD_NO_GROUP	:	UINT := 0;	 (*no group*)
+	pbCMD_GROUP1	:	UINT := 1;	 (*group 1*)
+	pbCMD_GROUP2	:	UINT := 2;	 (*group 2*)
+	pbCMD_GROUP3	:	UINT := 4;	 (*group 3*)
+	pbCMD_GROUP4	:	UINT := 8;	 (*group 4*)
+	pbCMD_GROUP5	:	UINT := 16;	 (*group 5*)
+	pbCMD_GROUP6	:	UINT := 32;	 (*group 6*)
+	pbCMD_GROUP7	:	UINT := 64;	 (*group 7*)
+	pbCMD_GROUP8	:	UINT := 128; (*group 8*)
+END_VAR
+
+(*possible Commands for PROFIBUSCommand*)
+VAR CONSTANT
+	pbCMD_CLEAR		:	UINT := 2;	(*clear output data*)
+	pbCMD_UNFREEZE	:	UINT := 4;	(*unfreeze input data*)
+	pbCMD_FREEZE	:	UINT := 8;	(*freeze input data*)
+	pbCMD_UNSYNC	:	UINT := 16;	(*neutralize the sync command*)
+	pbCMD_SYNC		:	UINT := 32;	(*freeze output data, till sync command is neutralized*)
+END_VAR
+

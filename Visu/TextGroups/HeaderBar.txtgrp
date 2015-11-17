@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="HeaderBar">
+  <Property Name="Description" Value="Texts for header bar"/>
+  <Property Name="Index" Value="12"/>
+  <TextSnippets>
+    <TextSnippet ClassId="0x00002003" Name="DateTime">
+      <Property Name="Description" Value=""/>
+      <Property Name="SimulationValue" Value="0"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+      <Property Name="TextGroup" Value="Source[global].TextGroup[DateTimeFormats]"/>
+      <Property Name="TextIndexOffset" Value="1"/>
+    </TextSnippet>
+  </TextSnippets>
+  <TextLayer LanguageId="en">
+    <Text ID="95439" Value="OAO &quot;Krichevcementoshifer&quot;"/>
+    <Text ID="100290" Value="The area crushing"/>
+    <Text ID="100292" Value="The area milling"/>
+    <Text ID="103453" Value="The control system"/>
+    <Text ID="103500" Value="The protection relay"/>
+    <Text ID="107541" Value="Alarming stop"/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="95439" Value="ОАО &quot;Кричевцементошифер&quot;"/>
+    <Text ID="100290" Value="Участок дробления"/>
+    <Text ID="100292" Value="Участок помола"/>
+    <Text ID="103453" Value="Система управления"/>
+    <Text ID="103500" Value="Реле безопасности"/>
+    <Text ID="107541" Value="Аварийный стоп"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="95439" Value="0"/>
+    <Index ID="100290" Value="1"/>
+    <Index ID="100292" Value="2"/>
+    <Index ID="103453" Value="3"/>
+    <Index ID="103500" Value="4"/>
+    <Index ID="107541" Value="5"/>
+  </IndexMap>
+</TextGroup>

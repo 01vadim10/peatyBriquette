@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<BitmapGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="shaftFeeder">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="44"/>
+  <Property Name="Translate" Value="False"/>
+  <BitmapLayer LanguageId="neutral">
+    <BitmapRef ID="1421" Value="Source[local].Bitmap[shaftFeeder_red]"/>
+    <BitmapRef ID="1422" Value="Source[local].Bitmap[shaftFeeder_grey]"/>
+    <BitmapRef ID="1423" Value="Source[local].Bitmap[shaftFeeder_green]"/>
+  </BitmapLayer>
+  <IndexMap>
+    <Index ID="1421" Value="2"/>
+    <Index ID="1422" Value="0"/>
+    <Index ID="1423" Value="1"/>
+  </IndexMap>
+</BitmapGroup>

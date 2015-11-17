@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="mode">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="178"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="96136" Value="Automatic Mode"/>
+    <Text ID="96137" Value="Manual Mode"/>
+    <Text ID="96139" Value="Adjust Mode"/>
+    <Text ID="109173" Value="The sector crushing"/>
+    <Text ID="109174" Value="Stop"/>
+    <Text ID="109175" Value="Technol. stop"/>
+    <Text ID="109176" Value="Adjustment"/>
+    <Text ID="109183" Value="The sector milling"/>
+    <Text ID="109195" Value="Auto start"/>
+    <Text ID="111350" Value="Adjustm"/>
+    <Text ID="111347" Value="Manual"/>
+    <Text ID="111348" Value="Auto"/>
+    <Text ID="111349" Value="Off"/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="96136" Value="Автоматический режим"/>
+    <Text ID="96137" Value="Ручной режим"/>
+    <Text ID="96139" Value="Наладочный режим"/>
+    <Text ID="109173" Value="Участок дробления"/>
+    <Text ID="109174" Value="Стоп"/>
+    <Text ID="109175" Value="Технолог. стоп"/>
+    <Text ID="109176" Value="Наладка"/>
+    <Text ID="109183" Value="Участок помола"/>
+    <Text ID="109195" Value="Пуск Автомат"/>
+    <Text ID="111350" Value="Налад"/>
+    <Text ID="111347" Value="Ручн"/>
+    <Text ID="111348" Value="Авто"/>
+    <Text ID="111349" Value="Откл"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="96136" Value="2"/>
+    <Index ID="96137" Value="4"/>
+    <Index ID="96139" Value="0"/>
+    <Index ID="109173" Value="7"/>
+    <Index ID="109174" Value="6"/>
+    <Index ID="109175" Value="5"/>
+    <Index ID="109176" Value="1"/>
+    <Index ID="109183" Value="8"/>
+    <Index ID="109195" Value="3"/>
+    <Index ID="111350" Value="12"/>
+    <Index ID="111347" Value="11"/>
+    <Index ID="111348" Value="10"/>
+    <Index ID="111349" Value="9"/>
+  </IndexMap>
+</TextGroup>

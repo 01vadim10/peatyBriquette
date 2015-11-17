@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=3.0.90.24 SP06?>
+<Library Description="The AsPROFIBUS library provides functions for integrating PROFIBUS services." xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>AsPROFIBUS.var</File>
+    <File>AsPROFIBUS.fun</File>
+  </Files>
+  <Dependencies>
+    <Dependency ObjectName="runtime" />
+  </Dependencies>
+</Library>

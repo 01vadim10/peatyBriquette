@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<BitmapGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="signal16R">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="40"/>
+  <Property Name="Translate" Value="False"/>
+  <BitmapLayer LanguageId="neutral">
+    <BitmapRef ID="1409" Value="Source[local].Bitmap[signal16_grey_0]"/>
+    <BitmapRef ID="1410" Value="Source[local].Bitmap[signal16_green_1]"/>
+    <BitmapRef ID="1411" Value="Source[local].Bitmap[signal16_red_2]"/>
+    <BitmapRef ID="1412" Value="Source[local].Bitmap[signal16_yellow_3]"/>
+  </BitmapLayer>
+  <IndexMap>
+    <Index ID="1409" Value="4"/>
+    <Index ID="1410" Value="1"/>
+    <Index ID="1411" Value="0"/>
+    <Index ID="1412" Value="2"/>
+  </IndexMap>
+</BitmapGroup>

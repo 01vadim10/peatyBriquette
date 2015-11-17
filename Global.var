@@ -1,0 +1,444 @@
+(*Входы и выходы участка дробления торфобрикета*)
+VAR
+	adjustModeButton : INT := 0;
+END_VAR
+(*Дробилка*)
+VAR
+	alarmAspiration : USINT := 0; (*Двигатель вентилятора пылеудаления*)
+END_VAR
+(*Блокировки*)
+(*Участок дробления*)
+VAR
+	alarmBeltFeeder : USINT := 0; (*Двигатель ленты питателя*)
+	alarmConveyor : USINT := 0; (*Двигатель конвейера*)
+	alarmDozator : USINT := 0; (*Дозатор*)
+	alarmElevator : USINT := 0; (*Двигатель элеватора*)
+	alarmGatewayFeeder : USINT := 0; (*Двигатель питателя шлюзового*)
+	alarmMelnTechkaMaxLevel : BOOL := FALSE; (*Максимальный уровень в течке мельницы аварийный*)
+	alarmMill : USINT := 0;
+END_VAR
+(*Участок помола*)
+VAR
+	alarmPumpPneum : USINT := 0;
+	alarmRipper : USINT := 0; (*Двигатель рыхлителя*)
+	alarmShaftFeeder : USINT := 0; (*Двигатель бильного вала питателя*)
+	alarmShaftIn : USINT := 0; (*Двигатель быстроходного и тихоходного валов дробилки*)
+	alarmShaftOut : USINT := 0;
+	alarmBunkerMaxLevel : USINT := 0; (*Максимальный уровень бункера*)
+	alarmValveExpl : USINT := 0;
+END_VAR
+(*Другие переменные*)
+VAR
+	lineMode : ARRAY[0..1] OF USINT := [2(0)]; (*Переменная для отображения режима работы линии дробления и помола*)
+	autoCrushing : BOOL := FALSE;
+	autoMilling : BOOL := FALSE;
+	Alarmstatus : ARRAY[0..100] OF BOOL := [101(0)];
+	adjCrushSwitch : BOOL := FALSE; (*Переменная включения/отключения наладочного режима*)
+	adjMillSwitch : BOOL := FALSE; (*Переменная включения/отключения наладочного режима участка помола*)
+	permission : BYTE := 0;
+END_VAR
+(*Сигнализаторы работы таймеров для предупреждений*)
+VAR
+	alarmTimerStart : ARRAY[0..14] OF USINT := [15(0)];
+	aspiration : USINT := 0;
+	autoMode : INT := 0;
+	autoModeButton : INT := 0;
+	beltFeederCoolerOn : BOOL := FALSE; (*Лента питателя. Включение вентилятора принудительного обдува электродвигателя.*)
+END_VAR
+(*Питатель*)
+VAR
+	binaryFuel : REAL := 0; (*Количество бинарного топлива*)
+	binFuelMax : USINT := 0;
+	buffer : ARRAY[0..31] OF USINT := [32(0)];
+END_VAR
+(*Бункер*)
+VAR
+	bunkerHighLevel : BOOL := FALSE; (*Бункер. Верхний уровень.*)
+	bunkerLowLevel : BOOL := FALSE; (*Бункер. Нижний уровень.*)
+	bunkerMaxLevel : BOOL := FALSE; (*Бункер. Максимальный уровень. *)
+	bunkerMinLevel : BOOL := FALSE; (*Бункер. Минимальный уровень. *)
+	controlExplValveBroken : BOOL := FALSE; (*Контроль взрывных клапанов неисправен*)
+	controlingPanelControl : BOOL := FALSE; (*Управление с пульта управления*)
+	controlProtOvervoltCrush : BOOL := FALSE; (*Контроль защиты от перенапряжений*)
+	controlProtOvervoltPomol : BOOL := FALSE; (*Контроль защиты от перенапряжений*)
+	controlProtOvervoltSystemcontr : BOOL := FALSE; (*Контрользащиты от перенапряжений*)
+	convCableSwitch : BOOL := FALSE; (*Конвейер. Тросовые выключатели.*)
+	convControlRot : BOOL := FALSE; (*Контроль вращения конвейера.*)
+END_VAR
+(*Конвейер*)
+VAR
+	convForward : BOOL := FALSE; (*Конвейер вперед.*)
+END_VAR
+(*Вентилятор пылеудаления*)
+VAR
+	coolerPyleudalElcabinetOn : BOOL := FALSE; (*Электрошкаф вентилятора пылеудаления включен.*)
+END_VAR
+(*Клапан взрывной*)
+VAR
+	D_kontrolVzrivnihKlap1 : BOOL := FALSE; (*Индукционный датчик положения взравного клапана*)
+END_VAR
+(*Проверка*)
+VAR
+	DigitI : USINT := 0;
+END_VAR
+(*Дозатор*)
+VAR
+	dozator_I : REAL := 0.0; (*Скорость подачи в кг/ч (фактическое значение)*)
+	dozator_P : REAL := 0.0; (*Уставка скорости подачи в кг/ч*)
+	dozator_Q : REAL := 0.0; (*Нагрузка ленты конвейера в кг/м*)
+	Dozator_Start : BOOL := FALSE; (*Дозирование включить*)
+	dozator_v : REAL := 0.0; (*Скорость ленты, м/с*)
+	dozator_Z1 : REAL := 0.0; (*Счетчик Z1, кг*)
+	dozatorNeispr : BOOL := FALSE; (*Неисправность дозатора*)
+	dustPeaty : REAL := 0; (*Количество тонн/час торфяной пыли*)
+	dustPeatyMax : USINT := 0;
+	elapsedTime : TIME := T#0S; (*Истекшее время таймера*)
+	elevBeltDown : BOOL := FALSE; (*Элеватор. Сбегание ленты внизу.*)
+	elevBeltUp : BOOL := FALSE; (*Элеватор. Сбегание ленты вверху*)
+	elevContolSpeed : BOOL := FALSE; (*Элеватор. Контроль скорости.*)
+	elevOn : BOOL := FALSE; (*Элеватор включить*)
+END_VAR
+(*Элеватор*)
+VAR
+	elevUp : BOOL := FALSE; (*Элеватор вверх*)
+END_VAR
+(*Характеристики электроприводов*)
+VAR
+	elmotorM1 : elmotor_typ := (0);
+	elmotorM2 : elmotor_typ := (0);
+	elmotorM3 : elmotor_typ := (0);
+	elmotorM4 : elmotor_typ := (0);
+	elmotorM5 : elmotor_typ := (0);
+	elmotorM7 : elmotor_typ := (0);
+	elmotorM8 : elmotor_typ := (0);
+	elmotorM9 : elmotor_typ := (0);
+	elmotorM10 : elmotor_typ := (0);
+	elmotorM11 : elmotor_typ := (0);
+	elmotorM12 : elmotor_typ := (0);
+	elmotorM13 : elmotor_typ := (0);
+	elmotorM16 : elmotor_typ := (0);
+	emrgPost_20 : BOOL := FALSE; (*Аварийный пост на отметке +2.0*)
+	emrgPost_65 : BOOL := FALSE; (*Аварийный пост на отметке +6.5*)
+	emrgPost_124 : BOOL := FALSE; (*Аварийный пост на отметке +12.4*)
+	emrgPost_157 : BOOL := FALSE; (*Аварийный пост на отметке +15.7*)
+END_VAR
+(*Аварийный пост*)
+VAR
+	emrgPostCrusher : BOOL := FALSE; (*Аварийные посты в зоне дробилки*)
+	emrgPostFeederLoadOn : BOOL := FALSE; (*Аварийный пост в зоне загрузки питателя нажат.*)
+	emrgPostFeederUnloadOn : BOOL := FALSE; (*Один из аварийных постов в зоне разгрузки питателя нажат.*)
+END_VAR
+(*Пульт управления*)
+VAR
+	emrgStopPanelControl : BOOL := FALSE; (*Аварийный стоп на пульте управления*)
+	eqStartAdjustmModeCrush : BOOL := FALSE; (*Пост местный. Пуск оборудования в наладочном режиме.*)
+	eqStartAdjustmModePomol : BOOL := FALSE; (*Пост местный. Пуск оборудования в наладочном режиме.*)
+	eqStopAdjustmModeCrush : BOOL := FALSE; (*Пост местный. Стоп оборудования в наладочном режиме. Стоп осуществляется всего оборудования, которое было включено.*)
+	eqStopAdjustmModePomol : BOOL := FALSE; (*Пост местный. Стоп оборудования в наладочном режиме. Стоп осуществляется всего оборудования, которое было включено.*)
+	F : ARRAY[0..5] OF REAL := [6(0.0)];
+END_VAR
+(*Преобразователи частоты*)
+VAR
+	FC_ready_0 : BOOL := FALSE; (*Готовность ПЧ тихоходного вала дробилки.*)
+	FC_ready_1 : BOOL := FALSE; (*Готовность ПЧ быстроходного  вала дробилки.*)
+	FC_ready_2 : BOOL := FALSE; (*Готовность ПЧ ленточного питателя.*)
+	FC_ready_3 : BOOL := FALSE; (*Готовность  ПЧ двигателя аспирации*)
+	FC_ready_4 : BOOL := FALSE; (*Готовность  ПЧ воздушно- винтового насоса*)
+	FC_ready_5 : BOOL := FALSE; (*Готовность ПЧ мельницы 200 квт*)
+	FC_run_0 : BOOL := FALSE; (*Работа ПЧ тихоходного вала дробилки.*)
+	FC_run_1 : BOOL := FALSE; (*Работа ПЧ быстроходного  вала дробилки.*)
+	FC_run_2 : BOOL := FALSE; (*Работа ПЧ ленточного питателя.*)
+	FC_run_3 : BOOL := FALSE; (*Работа  ПЧ двигателя аспирации*)
+	FC_run_4 : BOOL := FALSE; (*Работа  ПЧ воздушно- винтового насоса*)
+	FC_run_5 : BOOL := FALSE; (*Работа ПЧ мельницы 200 квт*)
+	FC_start_0 : BOOL := FALSE; (*Старт вперед ПЧ тихоходного вала дробилки.*)
+	FC_start_0R : BOOL := FALSE; (*Старт назад ПЧ тихоходного вала дробилки.*)
+	FC_start_1 : BOOL := FALSE; (*Старт вперед ПЧ быстроходного  вала дробилки.*)
+	FC_start_1R : BOOL := FALSE; (*Старт назад ПЧ быстроходного  вала дробилки.*)
+	FC_start_2 : BOOL := FALSE; (*Старт ПЧ ленточного питателя.*)
+	FC_start_3 : BOOL := FALSE; (*Старт  ПЧ двигателя аспирации*)
+	FC_start_4 : BOOL := FALSE; (*Старт  ПЧ воздушно- винтового насоса *)
+	FC_start_5 : BOOL := FALSE; (*Старт  ПЧ мельницы 200 квт*)
+	Feeder_mot_On : BOOL := FALSE; (*Включить шлюзовой питатель*)
+	Fr : ARRAY[0..5] OF REAL := [6(0.0)];
+END_VAR
+VAR RETAIN
+	Fset_0 : REAL;
+	Fset_1 : REAL; (*Задание частотыПЧ быстроходного  вала дробилки.*)
+	Fset_2 : REAL; (*Задание частотыПЧ ленточного питателя.*)
+	Fset_3 : REAL; (*Задание частоты  ПЧ двигателя аспирации*)
+	Fset_4 : REAL; (*Задание частоты  ПЧ воздушно- винтового насоса*)
+	Fset_5 : REAL; (*Задание частоты ПЧ мельницы 200 квт*)
+END_VAR
+(*Аспирация*)
+VAR
+	Head_CoolerOn : BOOL := FALSE; (*Привод аспирации включен*)
+	hid : vis_typ := (0);
+	I : ARRAY[0..5] OF REAL := [6(0.0)];
+	InOutControl : BOOL := FALSE;
+END_VAR
+(*Железоотделитель*)
+VAR
+	irSeparOn : BOOL := FALSE; (*Железоотделитель включён.*)
+	letdownPipelineSystemcontr : INT := 0; (*Разрежение в трубопроводе пылеудаления*)
+END_VAR
+(*Аналоговые датчики*)
+VAR
+	letdownPipelineSystemcontr_ : REAL := 0.0;
+	localPostPomolStop : BOOL := FALSE; (*Местный пост. Участок помола стоп*)
+	manMode : USINT := 0;
+	manModeButton : USINT := 0; (*Кнопка ручного режима управления.*)
+	mode : INT := 0; (*Выбор режима управления*)
+	objOn : ARRAY[0..16] OF BOOL := [17(FALSE)];
+	orderManStart : ARRAY[0..12] OF USINT := [13(0)]; (*Массив отвечающий за порядок запуска в атомат. и ручн. режимах*)
+	outBuffer : ARRAY[0..31] OF USINT := [32(0)];
+END_VAR
+(*Ресивер*)
+VAR
+	P_CO2_resiv : REAL := 0.0; (*давление CO2 в ресивере*)
+	P_CO2_resiv_Min : REAL := 0.0; (*давление CO2 в ресивере минимальное*)
+	P_CO2_resiv_Nom : REAL := 0.0; (*давление CO2 в ресивере номинальное*)
+	P_CO2_Systemcontr : INT := 0; (*Давление в системе подачи углекислого газа*)
+END_VAR
+(*Пневмотранспорт*)
+VAR
+	P_pnevmoTRANS1 : REAL := 0.0; (*давление в пневмотранспорие между клапоном подачи воздуха и фарсункой насоса*)
+	P_pnevmoTRANS2 : REAL := 0.0; (*давление в пневмотранспорие в конце трубопровода пневмотранспорта*)
+	P_PumpAir_Systemcontr : INT := 0; (*Давление воздуха в насосе пневматическом 1*)
+	P_truboprovodSystemcontr : INT := 0; (*Давление в трубопроводе пыли перед печью 2*)
+	P_truboprovodSystemcontr_ : REAL := 0.0;
+END_VAR
+(*Visu*)
+VAR
+	page : page_typ := (0);
+	password : STRING[80];
+END_VAR
+(*Печь*)
+VAR
+	Permission_Stove : BOOL := FALSE; (*Разрешение от печи*)
+	Permission_Stove2 : BOOL := FALSE; (*Разрешение от печи 2*)
+	power220OnSystemcontr : BOOL := FALSE; (*Питание 220 В ключено*)
+END_VAR
+(*Мельница*)
+VAR
+	powerConvMelnOn : BOOL := FALSE; (*Питание преобразователя мельницы включено*)
+END_VAR
+(*Электрошкаф 2-й очереди*)
+VAR
+	powerElcabinet2QueOn : BOOL := FALSE; (*Питание электрошкафа второй очереди включено.*)
+	powerElcabinetPumpPneumOn : BOOL := FALSE; (*Питание электрошкафа насоса пневматического включено*)
+	powerElmotorDozatorOn : BOOL := FALSE; (*Питание привода дозатора включено*)
+	powerInOutOnCrush : BOOL := FALSE;
+	powerInOutOnPomol : BOOL := FALSE;
+	powerInOutOnSystemcontr : BOOL := FALSE; (*Питание входов и выходов включено*)
+	powerIrSeparOn : BOOL := FALSE; (*Питание железоотделителя включено*)
+	presetTime : TIME := T#0S; (*Установленное время таймера*)
+	protElmotBeltFeeder : BOOL := FALSE; (*Защита электродвигателя лента питателя. Автоматический выключатель*)
+	protElmotConv : BOOL := FALSE; (*Защита электродвигателя конвейера. Автоматический выключатель*)
+	protElmotCrushShaftIn : BOOL := FALSE; (*Защита электродвигателя. Быстроходный вал дробилки.*)
+	protElmotCrushShaftOut : BOOL := FALSE; (*Защита электродвигателя тихоходного вала дробилки. Автоматический выключатель*)
+	protElmotElev : BOOL := FALSE; (*Защита электродвигателя элеватора. Автоматический выключатель*)
+	protElmotorRyhlitel : BOOL := FALSE; (*Защита двигателей. Рыхлитель*)
+	protElmotorShluzFeeder : BOOL := FALSE; (*Защита двигателей. Питатель шлюзовый*)
+	protElmotShaftFeeder : BOOL := FALSE; (*Защита электродвигателя бильного вала питателя. Автоматический выключатель*)
+	protMainRelOnSystemcontr : BOOL := FALSE; (*Реле безопасности главное включено*)
+	protRelCrushOn : BOOL := FALSE; (*Реле безопасности участка дробления включено*)
+	protRelFeederOn : BOOL := FALSE; (*Реле безопасности питателя включено*)
+	protRelPomolOn : BOOL := FALSE; (*Реле безопасности участка помола включено*)
+	protTempBeltFeeder : BOOL := FALSE;
+END_VAR
+(*Пневмонасос*)
+VAR
+	pumpAir : BOOL := FALSE; (*Подача воздуха*)
+	pumpPeatOn : BOOL := FALSE; (*Подача торфа включена*)
+	pumpPneumAirOn : BOOL := FALSE; (*Подача воздуха в насос пневматический*)
+	relDiscContolCrush : BOOL := FALSE; (*Пост местный. Управление участком отключено. Отключение управления реле безопасности.*)
+	relDiscContolPomol : BOOL := FALSE; (*Пост местный. Управление участком отключено. Отключение управления реле безопасности.*)
+END_VAR
+(*Дистанционное управление*)
+VAR
+	remoteControl : BOOL := FALSE; (*Управление дистанционное*)
+	reset1M11 : USINT := 0;
+END_VAR
+(*Система управления*)
+VAR
+	ringControlPanel : BOOL := FALSE; (*Звонок на пульте управления*)
+END_VAR
+(*Рыхлитель*)
+VAR
+	ripperElmotor1On : BOOL := FALSE; (*Рыхлитель. Двигатель 1 включить*)
+	ripperElmotor2On : BOOL := FALSE; (*Рыхлитель. Двигатель 2 включить*)
+END_VAR
+(*Участок дробления*)
+VAR
+	sectorCrushing : USINT := 0; (*Включение автоматического режима на участке дробления*)
+END_VAR
+(*Участок помола*)
+VAR
+	sectorMilling : USINT := 0; (*Включение автоматического режима на участке помола*)
+	Set_dozatorSchenck : REAL := 0.0; (*Управляющая величина для дозатора*)
+	shaftFeederCapNOff : BOOL := FALSE; (*Крышка бильного вала питателя закрыта*)
+	shaftFeederElmotOn : BOOL := FALSE; (*Бильный вал питателя. Включить электродвигатель  вращения бильного вала.*)
+	shaftFeederTempNorm : BOOL := FALSE; (*Температурная защита электродвигателя бильного вала питателя. Температура в норме.*)
+	shaftInCrusherCoolerOn : BOOL := FALSE; (*Быстроходный вал дробилки. Включение вентилятора принудительного обдува электродвигателя.*)
+	shaftInCrusherForward : BOOL := FALSE; (*Быстроходный вал дробилки. Быстроходный вал дробилки вперед.  Управление преобразователем.*)
+	shaftOutCrusherCoolerOn : BOOL := FALSE; (*Тихоходный вал дробилки. Включение вентилятора принудительного обдува электродвигателя.*)
+	shaftOutCrusherForward : BOOL := FALSE; (*Тихоходный вал дробилки. Тихоходный вал вперёд.Управление преобразователем.*)
+END_VAR
+(*Сирена*)
+VAR
+	Sirena : BOOL := FALSE; (*Сирена*)
+	sirenEq : BOOL := FALSE; (*Сирена на оборудовании*)
+	soundAlarm : USINT := 0;
+	soundLock : BOOL := FALSE;
+	T_bunkdrobTF : REAL := 0.0; (*Температура в бункере дробленого торфобрикета*)
+	T_korpusMEL : INT := 0; (*Температура корпуса мельницы*)
+	T_korpusMEL_ : REAL := 0.0;
+	tempElmotorMelnNorm : BOOL := FALSE; (*Температура двигателя мельницы в норме.*)
+	tempHighBunker_1 : REAL := 0.0;
+	tempHighBunker_2 : REAL := 0.0;
+	tempHighBunker1 : INT := 0; (*Температура вверху бункера 1*)
+	tempHighBunker2 : INT := 0;
+	tempMidBunker_1 : REAL := 0.0;
+	tempMidBunker_2 : REAL := 0.0;
+	tempMidBunker1 : INT := 0; (*Температура в середине бункера 1*)
+	tempMidBunker2 : INT := 0; (*Температура в середине бункера 1*)
+	tempProtElmotBeltNorm : BOOL := FALSE; (*Температурная защита электродвигателя конвейера. Температура в норме.*)
+	tempProtRyhlitel : BOOL := FALSE; (*Температурная защита рыхлителя*)
+	tempProtShluzFeeder : BOOL := FALSE; (*Температурная защита питателя шлюзового*)
+END_VAR
+VAR RETAIN
+	tempMidBunkerMin : INT := 0;
+	tempMidBunkerMax : INT := 0;
+	tempHighBunkerMin : INT := 0;
+	tempHighBunkerMax : INT := 0;
+	tempCaseMillMin : INT := 0;
+	tempCaseMillMax : INT := 0;
+	pressureCO2Min : INT := 0;
+	pressureCO2Max : INT := 0;
+	pressurePumpPneumMin : INT := 0;
+	pressurePumpPneumMax : INT := 0;
+	pressurePipelineKilnMin : INT := 0;
+	pressurePipelineKilnMax : INT := 0;
+	pressureDustPeatyMin : INT := 0;
+	pressureDustPeatyMax : INT := 0;
+END_VAR
+(*Таймеры*)
+VAR RETAIN
+	timer_cold0 : USINT; (*Таймер запуска сирены*)
+	timer_cold1 : USINT; (*Таймер запуска Вентилятора пылеудаления*)
+	timer_cold2 : USINT; (*Таймер запуска элеветора*)
+	timer_cold3 : USINT; (*Таймер запуска быстроходного и тихоходного валов дробилки*)
+	timer_cold4 : USINT; (*Таймер запуска конвейера*)
+	timer_cold5 : USINT; (*Таймер  запуска бильного вала питателя*)
+	timer_cold6 : USINT; (*Таймер включения ленты питателя*)
+	timer_cold7 : USINT; (*Таймер запуска насоса пневматического*)
+	timer_cold8 : USINT; (*Таймер запуска молотковой мельницы*)
+	timer_cold9 : USINT; (*Таймер запуска питателя шлюзового*)
+	timer_cold10 : USINT; (*Таймер запуска дозатора*)
+	timer_cold11 : USINT; (*Таймер запуска рыхлителя*)
+	timerStop0 : USINT; (*Таймер останова сирены*)
+	timerStop1 : USINT; (*Таймер останова Вентилятора пылеудаления*)
+	timerStop2 : USINT; (*Таймер останова элеветора*)
+	timerStop3 : USINT; (*Таймер останова быстроходного и тихоходного валов дробилки*)
+	timerStop4 : USINT; (*Таймер останова конвейера*)
+	timerStop5 : USINT; (*Таймер  останова бильного вала питателя*)
+	timerStop6 : USINT; (*Таймер останова ленты питателя*)
+	timerStop7 : USINT; (*Таймер останова насоса пневматического*)
+	timerStop8 : USINT; (*Таймер останова молотковой мельницы*)
+	timerStop9 : USINT; (*Таймер останова питателя шлюзового*)
+	timerStop10 : USINT; (*Таймер останова дозатора*)
+	timerStop11 : USINT; (*Таймер останова рыхлителя*)
+	timerTempBunker : USINT; (*Температура в бункере дробленного торфобрикета, С*)
+	timerBunkerMaxLevel : USINT; (*максимальный уровень в бункере*)
+	timerBunkerMidLevel : USINT; (*срединий уровень в бункере*)
+	timerCaseMill : USINT; (*Температура корпуса мельницы, С*)
+	timerPressureCO2 : USINT; (*Давление СО2 в ресивере, МПа*)
+	timerPrAirInjector : USINT; (*Давление воздуха в трубопроводе перед форсункой, МПа*)
+	timerPumpPneum : USINT; (*Давление воздуха в пневматическом насосе, МПа*)
+	timerPrAirBurner : USINT; (*Давление воздуха в трубопроводе перед горелкой, МПа*)
+	timerUPrAspiration : USINT; (*Разрежение в трубопроводе аспирации, кПа*)
+	timerCoolerBeltFeeder : USINT; (*Таймер выключения вентилятора ленточного питателя*)
+	timerCoolerShaftIn : USINT; (*Таймер выключения вентилятора быстр. вала дробилки*)
+	timerCoolerShaftOut : USINT; (*Таймер выключения вентилятора тих. вала дробилки*)
+	timerValveExpl : USINT; (*Таймер взрырвных клапанов*)
+END_VAR
+VAR
+	U : ARRAY[0..5] OF REAL := [6(0.0)];
+	valve1ExplControl : BOOL := FALSE; (*Контроль взрывных клапанов. Клапан 1 перед мельницей*)
+	valve2ExplControl : BOOL := FALSE; (*Контроль взрывных клапанов. Клапан 2 перед мельницей*)
+	valve3ExplControl : BOOL := FALSE; (*Контроль взрывных клапанов. Клапан 3 перед мельницей*)
+	valve4ExplControl : BOOL := FALSE; (*Контроль взрывных клапанов. Клапан 4 перед мельницей*)
+	input : BOOL := FALSE;
+	output : BOOL := FALSE;
+END_VAR
+(*Клапаны*)
+VAR
+	valveY1 : BOOL := FALSE; (* Клапан подачи углекислого газа .Зона помола рабочая*)
+	valveY2 : BOOL := FALSE; (*Клапан подачи углекислого газа .Зона помола аварийная*)
+	valveY3 : BOOL := FALSE; (*Клапан подачи углекислого газа .Зона трубопровод пыли рабочая*)
+	valveY4 : BOOL := FALSE; (*Клапан подачи углекислого газа .Зона бункер аварийная*)
+	valveY5 : BOOL := FALSE; (*Клапан подачи воздуха в насос пневматический*)
+	valveY6 : BOOL := FALSE; (*Клапан выпуска воздуха из зоны помола*)
+END_VAR
+(*Всплывающее окно электропривода.*)
+VAR
+	visElmotorM1 : INT := 0;
+	visElmotorM2 : INT := 0;
+	visElmotorM3 : INT := 0;
+	visElmotorM4 : INT := 0;
+	visElmotorM5 : INT := 0;
+	visElmotorM7 : INT := 0;
+	visElmotorM8 : INT := 0;
+	visElmotorM9 : INT := 0;
+	visElmotorM10 : INT := 0;
+	visElmotorM11 : INT := 0;
+	visElmotorM12 : INT := 0;
+	visElmotorM13 : INT := 0;
+	visElmotorM16 : INT := 0;
+END_VAR
+VAR RETAIN
+	W_dozatorSchenck : REAL; (*Задание производительности дозатора Schenck*)
+END_VAR
+(*Весы*)
+VAR
+	weightOn : BOOL := FALSE; (*Весы включены*)
+	Wmin_dozatorSchenck : REAL := 0.0; (*минимальная  производительность дозатора - 15 т/час*)
+	Wnom_dozatorSchenck : REAL := 0.0; (*Номинальная производительность дозатора - 15 т/час*)
+END_VAR
+(*Аварийные значения*)
+VAR RETAIN
+	alarmTempBunker : INT; (*Температура в бункере дробленного торфобрикета, С*)
+	alarmCaseMill : USINT; (*Температура корпуса мельницы, С*)
+	alarmPressureCO2 : USINT; (*Давление СО2 в ресивере, МПа*)
+	alarmPrAirInjector : USINT; (*Давление воздуха в трубопроводе перед форсункой, МПа*)
+	alarmMinPump : USINT; (*Мин давление воздуха в пневматическом насосе, МПа*)
+	alarmMaxPump : USINT; (*Макс давление воздуха в пневматическом насосе, МПа*)
+	alarmPrAirBurner : USINT; (*Давление воздуха в трубопроводе перед горелкой, МПа*)
+	alarmUPrAspiration : INT; (*Разрежение в трубопроводе аспирации, кПа*)
+	alarmMinCapacityBatcher : REAL; (*Дозатор Шенк. Мин производительность, кг/ч*)
+	alarmMaxCapacityBatcher : REAL; (*Дозатор Шенк. Макс производительность, кг/ч*)
+	alarmTempMidBunker : INT; (*Высокая температура в середине бункера*)
+	alarmTempHighBunker : INT; (*Высокая температура вверху бункера*)
+END_VAR
+(*Пароли*)
+VAR RETAIN
+	passAccess1 : STRING[20] := '123';
+	passAccess2 : STRING[20] := 'admin';
+END_VAR
+VAR CONSTANT
+	CRUSHING_AREA : BYTE := 0; (*Зона дробления*)
+	MILLING_AREA : BYTE := 1; (*Зона помола*)
+	OFF_MODE : BYTE := 0; (*Режим откл.*)
+	AUTO_MODE : BYTE := 1; (*Автоматический режим*)
+	MAN_MODE : BYTE := 2; (*Ручной режим*)
+	ADJ_MODE : BYTE := 3; (*Режим наладки*)
+	TECH_STOP : BYTE := 4;
+END_VAR
+(*Остановка приводов*)
+VAR
+	pointMillingTechStop : BOOL := FALSE;
+	pointMillingQuickStop : BOOL := FALSE;
+	pointCrushingTechStop : BOOL := FALSE;
+	pointCrushingQuickStop : BOOL := FALSE;
+END_VAR

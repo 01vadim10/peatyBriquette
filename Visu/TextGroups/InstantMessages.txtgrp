@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="InstantMessages">
+  <Property Name="Description" Value="Texts for instant messages"/>
+  <Property Name="Index" Value="10"/>
+  <TextSnippets>
+    <TextSnippet ClassId="0x00002001" Name="WaterTemp">
+      <Property Name="Datapoint" Value="None"/>
+      <Property Name="Description" Value=""/>
+      <Property Name="SimulationValue" Value="0"/>
+      <Property Name="StyleClass" Value="Source[relative:StyleGroup].StyleClass[Default]"/>
+    </TextSnippet>
+  </TextSnippets>
+  <TextLayer LanguageId="en">
+    <Text ID="95441" Value="Cap of floating shaft by feeder, close on."/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="95441" Value="Крышка бильного вала питателя закрыта"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="95441" Value="0"/>
+  </IndexMap>
+</TextGroup>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<BitmapGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="valve_downside">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="27"/>
+  <Property Name="Translate" Value="False"/>
+  <BitmapLayer LanguageId="neutral">
+    <BitmapRef ID="412" Value="Source[local].Bitmap[valve_down_side_grey_0]"/>
+    <BitmapRef ID="414" Value="Source[local].Bitmap[valve_down_side_green_2]"/>
+    <BitmapRef ID="415" Value="Source[local].Bitmap[valve_down_side_yellow_1]"/>
+    <BitmapRef ID="416" Value="Source[local].Bitmap[valve_down_side_red_3]"/>
+  </BitmapLayer>
+  <IndexMap>
+    <Index ID="412" Value="0"/>
+    <Index ID="414" Value="1"/>
+    <Index ID="415" Value="2"/>
+    <Index ID="416" Value="3"/>
+  </IndexMap>
+</BitmapGroup>

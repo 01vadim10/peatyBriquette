@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<BitmapGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="crusher_cooler_On">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="5"/>
+  <Property Name="Translate" Value="False"/>
+  <BitmapLayer LanguageId="neutral">
+    <BitmapRef ID="1140" Value="Source[local].Bitmap[shaftInCoolerOn]"/>
+    <BitmapRef ID="1141" Value="Source[local].Bitmap[shaftOutCoolerOn]"/>
+  </BitmapLayer>
+  <IndexMap>
+    <Index ID="1140" Value="0"/>
+    <Index ID="1141" Value="1"/>
+  </IndexMap>
+</BitmapGroup>

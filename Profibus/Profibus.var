@@ -1,0 +1,5 @@
+VAR
+	weight_data : weight := (0);
+	res : ARRAY[0..7] OF REAL := [8(0.0)];
+	res2 : ARRAY[0..7] OF REAL := [8(0.0)];
+END_VAR

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="dosing">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="6"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="97751" Value="Manual dosing"/>
+    <Text ID="97752" Value="Automatic dosing"/>
+    <Text ID="98525" Value="Adjust Mode"/>
+    <Text ID="101961" Value=""/>
+    <Text ID="102475" Value=""/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="97751" Value="Ручной режим"/>
+    <Text ID="97752" Value="Автоматический режим"/>
+    <Text ID="98525" Value="Наладка"/>
+    <Text ID="101961" Value="Производительность"/>
+    <Text ID="102475" Value="Управление"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="97751" Value="0"/>
+    <Index ID="97752" Value="1"/>
+    <Index ID="98525" Value="2"/>
+    <Index ID="101961" Value="3"/>
+    <Index ID="102475" Value="4"/>
+  </IndexMap>
+</TextGroup>

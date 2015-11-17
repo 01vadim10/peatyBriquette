@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="ManAdjustMode">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="7"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="98048" Value="Man/Adjust Mode"/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="98048" Value="Ручн/Наладка"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="98048" Value="0"/>
+  </IndexMap>
+</TextGroup>

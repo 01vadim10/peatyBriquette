@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="passMan">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="4"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="96746" Value="Enter password:"/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="96746" Value="Введите пароль:"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="96746" Value="0"/>
+  </IndexMap>
+</TextGroup>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="shaftFeederTemp">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="183"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="95301" Value="Temprature by shaft feeder in normal."/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="95301" Value="Температура бильного вала в норме."/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="95301" Value="0"/>
+  </IndexMap>
+</TextGroup>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<BitmapGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="bunker">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="22"/>
+  <Property Name="Translate" Value="False"/>
+  <BitmapLayer LanguageId="neutral">
+    <BitmapRef ID="491" Value="Source[local].Bitmap[bunker_max]"/>
+    <BitmapRef ID="492" Value="Source[local].Bitmap[bunker_min]"/>
+    <BitmapRef ID="493" Value="Source[local].Bitmap[bunker_up]"/>
+    <BitmapRef ID="494" Value="Source[local].Bitmap[bunker_down]"/>
+  </BitmapLayer>
+  <IndexMap>
+    <Index ID="491" Value="3"/>
+    <Index ID="492" Value="2"/>
+    <Index ID="493" Value="1"/>
+    <Index ID="494" Value="0"/>
+  </IndexMap>
+</BitmapGroup>

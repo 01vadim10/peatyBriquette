@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="manMode">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="5"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="96962" Value="Aspiration"/>
+    <Text ID="96963" Value="The sector crushing"/>
+    <Text ID="96964" Value="The sector milling"/>
+    <Text ID="96965" Value="The relation component:"/>
+    <Text ID="96966" Value="Binary fuel"/>
+    <Text ID="96967" Value="The dust peaty amount TPH."/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="96962" Value="Аспирация"/>
+    <Text ID="96963" Value="Участок дробления: включение всех элементов управления"/>
+    <Text ID="96964" Value="Участок помола: включение всех элементов управления"/>
+    <Text ID="96965" Value="Соотношения компонентов:"/>
+    <Text ID="96966" Value="Бинарного топлива"/>
+    <Text ID="96967" Value="Количество тонн/час торфяной пыли"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="96962" Value="0"/>
+    <Index ID="96963" Value="1"/>
+    <Index ID="96964" Value="2"/>
+    <Index ID="96965" Value="3"/>
+    <Index ID="96966" Value="4"/>
+    <Index ID="96967" Value="5"/>
+  </IndexMap>
+</TextGroup>

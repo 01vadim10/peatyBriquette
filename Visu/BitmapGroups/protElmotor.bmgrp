@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<BitmapGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="protElmotor">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="34"/>
+  <Property Name="Translate" Value="False"/>
+  <BitmapLayer LanguageId="neutral">
+    <BitmapRef ID="1196" Value="Source[local].Bitmap[protElmotorOff]"/>
+    <BitmapRef ID="1197" Value="Source[local].Bitmap[protElmotorOn]"/>
+  </BitmapLayer>
+  <IndexMap>
+    <Index ID="1196" Value="0"/>
+    <Index ID="1197" Value="1"/>
+  </IndexMap>
+</BitmapGroup>

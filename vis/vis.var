@@ -1,0 +1,70 @@
+VAR
+	passScreenMilling : USINT := 0;
+	passScreenCrushing : USINT := 0;
+	areaCrushing : USINT := 0;
+	areaMilling : USINT := 0;
+	adjustMode : USINT := 0;
+	elevBeltDirection : USINT := 0;
+	autoModeScreen : USINT := 0; (*Всплывающее окно автоматического режима управления.*)
+	manModeScreen : USINT := 0; (*Всплывающее окно ручного режима управления.*)
+	adjustModeScreen : USINT := 0;
+	aspirationOnOff : USINT := 0;
+	crushingOnOff : USINT := 0;
+	millingOnOff : USINT := 0; (*reset1M11 : USINT := 0; Сбросить счетчик количества подаваемого материала 1*)
+	visChooseMode : USINT := 0;
+	crushingManMode : USINT := 0; (*Переменная для блокировки запуска механизмов на участке дробления*)
+	millingManMode : USINT := 0; (*Переменная для блокировки запуска механизмов на участке помола*)
+	passPage : USINT := 0;
+	exitPassPage : USINT := 0;
+	login : BOOL := FALSE;
+	logOut : BOOL := FALSE;
+	passColor : BOOL := FALSE;
+	lockCrushingAreaVis : BOOL := FALSE;
+	lockMillingAreaVis : BOOL := FALSE;
+END_VAR
+(*Таймеры подачи углекислого газа*)
+VAR
+	valveY1T : TON := (0);
+	valveY2T : TON := (0);
+	valveY3T : TON := (0);
+	valveY4T : TON := (0);
+	valveY1TSec : UDINT := 0;
+	valveY2TSec : UDINT := 0;
+	valveY3TSec : UDINT := 0;
+	valveY4TSec : UDINT := 0;
+END_VAR
+(*Информация о сигналах*)
+VAR
+	crArA12 : USINT := 0;
+	crArA13 : USINT := 0;
+	crArA14 : USINT := 0;
+	crArA15 : USINT := 0;
+	crArA16 : USINT := 0;
+	crArA17 : USINT := 0;
+	mArA12 : USINT := 0;
+	mArA13 : USINT := 0;
+	mArA14 : USINT := 0;
+	mArA15 : USINT := 0;
+	ctrlSysA12 : USINT := 0;
+	ctrlSysA13 : USINT := 0;
+	ctrlSysA18 : USINT := 0;
+	ctrlSysA19 : USINT := 0;
+END_VAR
+(*Таймеры для выключения вентиляторов*)
+VAR
+	coolerShaftOutTON : TON := (0);
+	coolerShaftInTON : TON := (0);
+	coolerBeltFeederTON : TON := (0);
+END_VAR
+VAR RETAIN
+	lowBatcherCapacity : USINT := 0; (*Низкая производительность дозатора*)
+END_VAR
+VAR
+	lowBatcherCapacityTON : TON := (0);
+END_VAR
+VAR RETAIN
+	timer_cold12 : UDINT := 0;
+END_VAR
+VAR
+	colorBatcherCapacity : BOOL := FALSE;
+END_VAR

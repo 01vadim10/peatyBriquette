@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="Timers">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="11"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="101489" Value=""/>
+    <Text ID="101490" Value=""/>
+    <Text ID="101491" Value=""/>
+    <Text ID="101492" Value=""/>
+    <Text ID="101493" Value=""/>
+    <Text ID="101494" Value=""/>
+    <Text ID="101495" Value=""/>
+    <Text ID="101509" Value=""/>
+    <Text ID="102507" Value=""/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="101489" Value="Рыхлитель"/>
+    <Text ID="101490" Value="Клапан стравливания воздуха"/>
+    <Text ID="101491" Value="Клапан подачи СО2"/>
+    <Text ID="101492" Value="Насос пневматический"/>
+    <Text ID="101493" Value="Мельница молотковая"/>
+    <Text ID="101494" Value="Питатель шлюзовой"/>
+    <Text ID="101495" Value="Дозатор Шенк"/>
+    <Text ID="101509" Value="Участок помола"/>
+    <Text ID="102507" Value="Сжатый воздух пневмотранспорт"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="101489" Value="0"/>
+    <Index ID="101490" Value="6"/>
+    <Index ID="101491" Value="5"/>
+    <Index ID="101492" Value="4"/>
+    <Index ID="101493" Value="3"/>
+    <Index ID="101494" Value="2"/>
+    <Index ID="101495" Value="1"/>
+    <Index ID="101509" Value="7"/>
+    <Index ID="102507" Value="8"/>
+  </IndexMap>
+</TextGroup>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?AutomationStudio Version="3.0.90.27 SP09"?>
+<TextGroup xmlns="http://br-automation.co.at/AS/VC/Project" Name="autoMode">
+  <Property Name="Description" Value=""/>
+  <Property Name="Index" Value="1"/>
+  <TextSnippets/>
+  <TextLayer LanguageId="en">
+    <Text ID="96144" Value="Aspiration"/>
+    <Text ID="96145" Value="The sector crushing"/>
+    <Text ID="96146" Value="The sector milling"/>
+    <Text ID="96149" Value="The relation component:"/>
+    <Text ID="96150" Value="Binary fuel"/>
+    <Text ID="96151" Value="The dust peaty amount KGPH."/>
+    <Text ID="101449" Value="Nominal, TPH"/>
+    <Text ID="101965" Value="Defined, TPH"/>
+    <Text ID="105711" Value="Couner Z1, kg"/>
+    <Text ID="105713" Value=""/>
+    <Text ID="105712" Value="Speed of the belt, m/s"/>
+  </TextLayer>
+  <TextLayer LanguageId="ru">
+    <Text ID="96144" Value="Пылеудаление"/>
+    <Text ID="96145" Value="Участок дробления"/>
+    <Text ID="96146" Value="Участок помола"/>
+    <Text ID="96149" Value="Производительность подачи пылевидного топлива:"/>
+    <Text ID="96150" Value="Бинарного топлива"/>
+    <Text ID="96151" Value="Текущая, кг/ч"/>
+    <Text ID="101449" Value="Номинальная, т/ч"/>
+    <Text ID="101965" Value="Установленная, кг/ч"/>
+    <Text ID="105711" Value="Счетчик Z1, кг"/>
+    <Text ID="105713" Value="Нагрузка на ленту, кг/м"/>
+    <Text ID="105712" Value="Скорость ленты, м/с"/>
+  </TextLayer>
+  <IndexMap>
+    <Index ID="96144" Value="0"/>
+    <Index ID="96145" Value="1"/>
+    <Index ID="96146" Value="2"/>
+    <Index ID="96149" Value="3"/>
+    <Index ID="96150" Value="4"/>
+    <Index ID="96151" Value="5"/>
+    <Index ID="101449" Value="6"/>
+    <Index ID="101965" Value="7"/>
+    <Index ID="105711" Value="10"/>
+    <Index ID="105713" Value="8"/>
+    <Index ID="105712" Value="9"/>
+  </IndexMap>
+</TextGroup>

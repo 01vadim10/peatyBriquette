@@ -1,0 +1,166 @@
+(********************************************************************
+ * COPYRIGHT --  
+ ********************************************************************
+ * Program: pp420
+ * File: pp420.var
+ * Author: VZylevich
+ * Created: February 25, 2013
+ ********************************************************************
+ * Local variables of program MyExample
+ ********************************************************************)
+(*Весы*)
+VAR
+	weightOn : BOOL := FALSE; (*Весы включены*)
+END_VAR
+(*Питатель*)
+VAR
+	emrgPostFeederLoadOn : BOOL := FALSE; (*Аварийный пост в зоне загрузки питателя нажат.*)
+	emrgPostFeederUnloadOn : BOOL := FALSE; (*Один из аварийных постов в зоне разгрузки питателя нажат.*)
+	Feeder_mot_On : BOOL := FALSE; (*Включить шлюзовой питатель*)
+	prot_mot_Feeder_I : BOOL := FALSE; (*Защита электродвигателя шлюзового питателя. Автоматический выключатель*)
+	prot_mot_Feeder_T : BOOL := FALSE; (*Защита электродвигателя шлюзового питателя. Тепловое реле*)
+	protElmotBeltFeeder : BOOL := FALSE; (*Защита электродвигателя лента питателя. Автоматический выключатель*)
+	protElmotShaftFeeder : BOOL := FALSE; (*Защита электродвигателя бильного вала питателя. Автоматический выключатель*)
+	protElmotorShluzFeeder : BOOL := FALSE; (*Защита двигателей. Питатель шлюзовый*)
+	tempProtShluzFeeder : BOOL := FALSE; (*Температурная защита питателя шлюзового*)
+	protRelFeederOn : BOOL := FALSE; (*Реле безопасности питателя включено*)
+	shaftFeederCapOff : BOOL := FALSE; (*Крышка бильного вала питателя закрыта*)
+	shaftFeederElmotOn : BOOL := FALSE; (*Бильный вал питателя. Включить электродвигатель  вращения бильного вала.*)
+	shaftFeederTempNorm : BOOL := FALSE; (*Температурная защита электродвигателя бильного вала питателя. Температура в норме.*)
+END_VAR
+(*Конвейер*)
+VAR
+	convCableSwitch : BOOL := FALSE; (*Конвейер. Тросовые выключатели.*)
+	convControlRot : BOOL := FALSE; (*Контроль вращения конвейера.*)
+	convOn : BOOL := FALSE; (*Конвейер включить*)
+	protElmotConv : BOOL := FALSE; (*Защита электродвигателя конвейера. Автоматический выключатель*)
+	tempProtElmotBeltNorm : BOOL := FALSE; (*Температурная защита электродвигателя конвейера. Температура в норме.*)
+END_VAR
+(*Участок помола*)
+VAR
+	Alarm_Stop_Pomol : BOOL := FALSE; (*Аварийный останов участка помола*)
+	protRelPomolOn : BOOL := FALSE; (*Реле безопасности участка помола включено*)
+	Cooler_converter_ON : BOOL := FALSE; (*Вентиляторы частотных приводов участка помола включены*)
+END_VAR
+(*Мельница*)
+VAR
+	powerConvMelnOn : BOOL := FALSE; (*Питание преобразователя мельницы включено*)
+	tempElmotorMelnNorm : BOOL := FALSE; (*Температура двигателя мельницы в норме.*)
+	alarmMelnTechkaMaxLevel : BOOL := FALSE; (*Максимальный уровень в течке мельницы аварийный*)
+	Crusher_HeadCoolerOn : BOOL := FALSE; (*Вентилятор мельницы включен*)
+	Crusher_HeadOn : BOOL := FALSE; (*Молотковая мельница включена*)
+	T_korpusMEL : INT := 0; (*Температура корпуса мельницы*)
+END_VAR
+(*Дробилка*)
+VAR
+	Alarm_Stop_Droblenie : BOOL := FALSE; (*Аварийный останов участка дробления*)
+	protElmotCrushShaftIn : BOOL := FALSE; (*Защита электродвигателя. Быстроходный вал дробилки.*)
+	protElmotCrushShaftOut : BOOL := FALSE; (*Защита электродвигателя тихоходного вала дробилки. Автоматический выключатель*)
+	protRelCrushOn : BOOL := FALSE; (*Реле безопасности участка дробления включено*)
+	shaftInCrusherBackward : BOOL := FALSE; (*Быстроходный вал дробилки. Быстроходный вал назад.Управление преобразователем.*)
+	shaftInCrusherConverterReady : BOOL := FALSE; (*Быстроходный вал дробилки. Преобразователь готов*)
+	shaftInCrusherCoolerOn : BOOL := FALSE; (*Быстроходный вал дробилки. Включение вентилятора принудительного обдува электродвигателя.*)
+	shaftInCrusherElmotorOn : BOOL := FALSE; (*Быстроходный вал дробилки. Привод включен*)
+	shaftInCrusherForward : BOOL := FALSE; (*Быстроходный вал дробилки. Быстроходный вал дробилки вперед.  Управление преобразователем.*)
+	shaftOutCrusherBackward : BOOL := FALSE; (*Тихоходный вал дробилки. Тихоходный вал назад. Управление преобразователем.*)
+	shaftOutCrusherConverterReady : BOOL := FALSE; (*Тихоходный вал дробилки. Преобразователь готов*)
+	shaftOutCrusherCoolerOn : BOOL := FALSE; (*Тихоходный вал дробилки. Включение вентилятора принудительного обдува электродвигателя.*)
+	shaftOutCrusherElmotorOn : BOOL := FALSE; (*Тихоходный вал дробилки. Привод включен*)
+	shaftOutCrusherForward : BOOL := FALSE; (*Тихоходный вал дробилки. Тихоходный вал вперёд.Управление преобразователем.*)
+END_VAR
+VAR RETAIN
+	test1 : BOOL := FALSE; (*Пуск участка дробления в автоматическом режиме*)
+END_VAR
+VAR
+	timer_cold3 : TIME := T#0S; (*Таймер быстроходного вала дробилки*)
+	timer_cold4 : TIME := T#0S; (*Таймер тихоходного вала дробилки*)
+END_VAR
+(*Взрывной клапан*)
+VAR
+	D_kontrolVzrivnihKlap1 : BOOL := FALSE; (*Индукционный датчик положения взравного клапана*)
+	D_kontrolVzrivnihKlap2 : BOOL := FALSE; (*Индукционный датчик положения взравного клапана*)
+END_VAR
+(*Проверка*)
+VAR
+	DigitI : BOOL := FALSE;
+	DigitO : BOOL := FALSE; (*Выбор режима управления (ручной(1)/автом.(0))*)
+END_VAR
+(*Элеватор*)
+VAR
+	elevBeltDown : BOOL := FALSE; (*Элеватор. Сбегание ленты внизу.*)
+	elevBeltUp : BOOL := FALSE; (*Элеватор. Сбегание ленты вверху*)
+	elevContolSpeed : BOOL := FALSE; (*Элеватор. Контроль скорости.*)
+	elevOn : BOOL := FALSE; (*Элеватор включить*)
+	protElmotElev : BOOL := FALSE; (*Защита электродвигателя элеватора. Автоматический выключатель*)
+END_VAR
+(*Местный пост*)
+VAR
+	eqStartAdjustmMode : BOOL := FALSE; (*Пост местный. Пуск оборудования в наладочном режиме.*)
+	eqStopAdjustmMode : BOOL := FALSE; (*Пост местный. Стоп оборудования в наладочном режиме. Стоп осуществляется всего оборудования, которое было включено.*)
+	relDiscContol : BOOL := FALSE; (*Пост местный. Управление участком отключено. Отключение управления реле безопасности.*)
+END_VAR
+(*Аспирация*)
+VAR
+	Head_CoolerOn : BOOL := FALSE; (*Привод аспирации включен*)
+	P_aspirat : REAL := 0.0; (*Разряжение в трубопроводе аспирации перед вентилятором*)
+	P_aspirat_Nom : REAL := 0.0; (*Номинальное разряжение в трубопроводе аспирации перед вентилятором*)
+END_VAR
+(*Железоотделитель*)
+VAR
+	powerIrSeparOn : BOOL := FALSE; (*Питание железоотделителя включено*)
+END_VAR
+(*Ресивер*)
+VAR
+	P_CO2_resiv : REAL := 0.0; (*давление CO2 в ресивере*)
+	P_CO2_resiv_Min : REAL := 0.0; (*давление CO2 в ресивере минимальное*)
+	P_CO2_resiv_Nom : REAL := 0.0; (*давление CO2 в ресивере номинальное*)
+END_VAR
+(*Пневмотранспорт*)
+VAR
+	P_pnevmoTRANS1 : REAL := 0.0; (*давление в пневмотранспорие между клапоном подачи воздуха и фарсункой насоса*)
+	P_pnevmoTRANS2 : REAL := 0.0; (*давление в пневмотранспорие в конце трубопровода пневмотранспорта*)
+END_VAR
+(*Печь*)
+VAR
+	Permission_Stove : BOOL := FALSE; (*Разрешение от печи*)
+END_VAR
+(*Электрошкаф 2-й очереди*)
+VAR
+	powerElcabinet2QueOn : BOOL := FALSE; (*Питание электрошкафа второй очереди включено.*)
+END_VAR
+(*Входы/выходы*)
+VAR
+	powerInOutOn : BOOL := FALSE; (*Питание входов и выходов включено.*)
+END_VAR
+(*Пневмонасос*)
+VAR
+	Pump_AirCoolerOn : BOOL := FALSE; (*Вентилятор пневмонасоса включен*)
+	Pump_AirOn : BOOL := FALSE; (*Пневмонасос включен*)
+	powerElcabinetPumpAirOn : BOOL := FALSE; (*Питание электрошкафа насоса пневматического включено*)
+END_VAR
+(*Сирена*)
+VAR
+	Sirena : BOOL := FALSE; (*Сирена*)
+END_VAR
+(*Таймеры*)
+VAR
+	timer_cold1 : TIME := T#10S; (*Таймер сирены*)
+	timer_cold2 : TIME := T#0S; (*Таймер элеветора*)
+	timer_cold5 : TIME := T#0S; (*Таймер конвейера*)
+	timer_cold6 : TIME := T#0S; (*Таймер  бильного вала питателя*)
+	timer_cold7 : TIME := T#0S; (*Таймер включения ленты питателя*)
+	timer_cold8 : TIME := T#0S; (*Таймер молотковой мельницы*)
+	timer_cold9 : TIME := T#0S; (*Таймер Вентилятора пылеудоления*)
+END_VAR
+(*Рыхлитель*)
+VAR
+	protmotor_Vorosh_I : BOOL := FALSE; (*Защита электродвигателя рыхлителя. Автоматический выключатель*)
+	protmotor_Vorosh_T : BOOL := FALSE; (*Защита электродвигателя рыхлителя. Тепловое реле*)
+	Vorosh_On : BOOL := FALSE; (*Рыхлитель включить*)
+	protElmotorRyhlitel : BOOL := FALSE; (*Защита двигателей. Рыхлитель*)
+	tempProtRyhlitel : BOOL := FALSE; (*Температурная защита рыхлителя*)
+END_VAR
+(*Контроль защиты от перенапряжений*)
+VAR
+	controlProtOvervolt : BOOL := FALSE; (*Контроль защиты от перенапряжений.*)
+END_VAR
